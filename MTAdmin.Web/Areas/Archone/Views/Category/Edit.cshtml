@@ -1,0 +1,106 @@
+﻿@model CategoryVM
+@{
+    if (string.IsNullOrWhiteSpace(Model.Img))
+    {
+        Model.Img = "https://placehold.co/450x450";
+    }
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+                <div class="card card-primary card-outline">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 px-0">
+                                <div class="">
+                                    <img id="catImg" class="img-fluid img-thumbnail" src="@Model.Img" style="height: 250px;width:100%;" asp-append-version="true">
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                        <input type="file" id="ImgFile" accept="image/png, image/jpeg, image/jpg" onchange="fileLoad(event, 'ImgFile', 'catImg');" class="custom-file-input">
+                                            <label class="custom-file-label">Choose file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                        <button class="input-group-text" type="button" onclick="clearElValue('ImgFile');clearElValue('catImg');">Clear</button>
+                                            <button class="input-group-text" type="button" onclick="changeFile('@Model.Id')">Change</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-9">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Edit Category</h3>
+                    </div>
+                    <form novalidate="novalidate" method="post" asp-action="Edit">
+                        <div class="card-body">
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="Name">Name</label>
+                                <input placeholder="Enter name" class="form-control" asp-for="Name" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Desc">Description</label>
+                                <textarea class="form-control" asp-for="Desc" placeholder="Enter description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Slug">Slug</label>
+                                <input type="text" class="form-control" asp-for="Slug" placeholder="Enter native name">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Desc">Image alternate text</label>
+                                <input placeholder="Enter alternate text for image" class="form-control" asp-for="ImgAlt" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Desc">Meta description</label>
+                            <textarea asp-for="MetaDesc" placeholder="Enter meta description" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Desc">Meta keyword</label>
+                            <textarea asp-for="MetaKeywords" placeholder="Enter meta title" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group clearfix">
+                                <div class="icheck-primary d-inline">
+                                    <input type="checkbox" asp-for="IsActive">
+                                    <label asp-for="IsActive">
+                                        Is Active
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>
+@section Scripts {
+    @await Html.PartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml")
+    <script type="text/javascript">
+        $(function () {
+            $('#@Html.IdFor(x => x.Name)').on('input', function () {
+                copySlugify('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.Slug)');
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaDesc)',textCaseTypes.AsItis);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaKeywords)', ' Category,', textCaseTypes.TitlCase);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.ImgAlt)', ' Category', textCaseTypes.TitlCase);
+            });
+        });
+        const changeFile = function (id) {
+            const file = document.querySelector('#ImgFile');
+            if (isValidTempOrThumbFile(file.files[0], 'ImgFile')) {
+                let formData = new FormData();
+                formData.append("Id", id);
+                formData.append("Img", file.files[0]);
+                uploadFileAjax('@Url.Action("EditCategoryImg","Category")', formData);
+            }                        
+        }
+    </script>
+}

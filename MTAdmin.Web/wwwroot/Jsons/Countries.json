@@ -1,0 +1,1988 @@
+{
+  "Countries": [
+    {
+      "Name": "Afghanistan",
+      "OfficialName": "The Islamic Republic of Afghanistan",
+      "Alpha2Code": "AF",
+      "Alpha3Code": "AFG",
+      "CountryCode": 4,
+      "TopLevelDomain": ".af"
+    },
+    {
+      "Name": "Åland Islands",
+      "OfficialName": "Åland",
+      "Alpha2Code": "AX",
+      "Alpha3Code": "ALA",
+      "CountryCode": 248,
+      "TopLevelDomain": ".ax"
+    },
+    {
+      "Name": "Albania",
+      "OfficialName": "The Republic of Albania",
+      "Alpha2Code": "AL",
+      "Alpha3Code": "ALB",
+      "CountryCode": 8,
+      "TopLevelDomain": ".al"
+    },
+    {
+      "Name": "Algeria",
+      "OfficialName": "The People's Democratic Republic of Algeria",
+      "Alpha2Code": "DZ",
+      "Alpha3Code": "DZA",
+      "CountryCode": 12,
+      "TopLevelDomain": ".dz"
+    },
+    {
+      "Name": "American Samoa",
+      "OfficialName": "The Territory of American Samoa",
+      "Alpha2Code": "AS",
+      "Alpha3Code": "ASM",
+      "CountryCode": 16,
+      "TopLevelDomain": ".as"
+    },
+    {
+      "Name": "Andorra",
+      "OfficialName": "The Principality of Andorra",
+      "Alpha2Code": "AD",
+      "Alpha3Code": "AND",
+      "CountryCode": 20,
+      "TopLevelDomain": ".ad"
+    },
+    {
+      "Name": "Angola",
+      "OfficialName": "The Republic of Angola",
+      "Alpha2Code": "AO",
+      "Alpha3Code": "AGO",
+      "CountryCode": 24,
+      "TopLevelDomain": ".ao"
+    },
+    {
+      "Name": "Anguilla",
+      "OfficialName": "Anguilla",
+      "Alpha2Code": "AI",
+      "Alpha3Code": "AIA",
+      "CountryCode": 660,
+      "TopLevelDomain": ".ai"
+    },
+    {
+      "Name": "Antarctica",
+      "OfficialName": "Antarctica",
+      "Alpha2Code": "AQ",
+      "Alpha3Code": "ATA",
+      "CountryCode": 10,
+      "TopLevelDomain": ".aq"
+    },
+    {
+      "Name": "Antigua and Barbuda",
+      "OfficialName": "Antigua and Barbuda",
+      "Alpha2Code": "AG",
+      "Alpha3Code": "ATG",
+      "CountryCode": 28,
+      "TopLevelDomain": ".ag"
+    },
+    {
+      "Name": "Argentina",
+      "OfficialName": "The Argentine Republic",
+      "Alpha2Code": "AR",
+      "Alpha3Code": "ARG",
+      "CountryCode": 32,
+      "TopLevelDomain": ".ar"
+    },
+    {
+      "Name": "Armenia",
+      "OfficialName": "The Republic of Armenia",
+      "Alpha2Code": "AM",
+      "Alpha3Code": "ARM",
+      "CountryCode": 51,
+      "TopLevelDomain": ".am"
+    },
+    {
+      "Name": "Aruba",
+      "OfficialName": "Aruba",
+      "Alpha2Code": "AW",
+      "Alpha3Code": "ABW",
+      "CountryCode": 533,
+      "TopLevelDomain": ".aw"
+    },
+    {
+      "Name": "Australia",
+      "OfficialName": "The Commonwealth of Australia",
+      "Alpha2Code": "AU",
+      "Alpha3Code": "AUS",
+      "CountryCode": 36,
+      "TopLevelDomain": ".au"
+    },
+    {
+      "Name": "Austria",
+      "OfficialName": "The Republic of Austria",
+      "Alpha2Code": "AT",
+      "Alpha3Code": "AUT",
+      "CountryCode": 40,
+      "TopLevelDomain": ".at"
+    },
+    {
+      "Name": "Azerbaijan",
+      "OfficialName": "The Republic of Azerbaijan",
+      "Alpha2Code": "AZ",
+      "Alpha3Code": "AZE",
+      "CountryCode": 31,
+      "TopLevelDomain": ".az"
+    },
+    {
+      "Name": "Bahamas",
+      "OfficialName": "The Commonwealth of The Bahamas",
+      "Alpha2Code": "BS",
+      "Alpha3Code": "BHS",
+      "CountryCode": 44,
+      "TopLevelDomain": ".bs"
+    },
+    {
+      "Name": "Bahrain",
+      "OfficialName": "The Kingdom of Bahrain",
+      "Alpha2Code": "BH",
+      "Alpha3Code": "BHR",
+      "CountryCode": 48,
+      "TopLevelDomain": ".bh"
+    },
+    {
+      "Name": "Bangladesh",
+      "OfficialName": "The People's Republic of Bangladesh",
+      "Alpha2Code": "BD",
+      "Alpha3Code": "BGD",
+      "CountryCode": 50,
+      "TopLevelDomain": ".bd"
+    },
+    {
+      "Name": "Barbados",
+      "OfficialName": "Barbados",
+      "Alpha2Code": "BB",
+      "Alpha3Code": "BRB",
+      "CountryCode": 52,
+      "TopLevelDomain": ".bb"
+    },
+    {
+      "Name": "Belarus",
+      "OfficialName": "The Republic of Belarus",
+      "Alpha2Code": "BY",
+      "Alpha3Code": "BLR",
+      "CountryCode": 112,
+      "TopLevelDomain": ".by"
+    },
+    {
+      "Name": "Belgium",
+      "OfficialName": "The Kingdom of Belgium",
+      "Alpha2Code": "BE",
+      "Alpha3Code": "BEL",
+      "CountryCode": 56,
+      "TopLevelDomain": ".be"
+    },
+    {
+      "Name": "Belize",
+      "OfficialName": "Belize",
+      "Alpha2Code": "BZ",
+      "Alpha3Code": "BLZ",
+      "CountryCode": 84,
+      "TopLevelDomain": ".bz"
+    },
+    {
+      "Name": "Benin",
+      "OfficialName": "The Republic of Benin",
+      "Alpha2Code": "BJ",
+      "Alpha3Code": "BEN",
+      "CountryCode": 204,
+      "TopLevelDomain": ".bj"
+    },
+    {
+      "Name": "Bermuda",
+      "OfficialName": "Bermuda",
+      "Alpha2Code": "BM",
+      "Alpha3Code": "BMU",
+      "CountryCode": 60,
+      "TopLevelDomain": ".bm"
+    },
+    {
+      "Name": "Bhutan",
+      "OfficialName": "The Kingdom of Bhutan",
+      "Alpha2Code": "BT",
+      "Alpha3Code": "BTN",
+      "CountryCode": 64,
+      "TopLevelDomain": ".bt"
+    },
+    {
+      "Name": "Bolivia",
+      "OfficialName": "The Plurinational State of Bolivia",
+      "Alpha2Code": "BO",
+      "Alpha3Code": "BOL",
+      "CountryCode": 68,
+      "TopLevelDomain": ".bo"
+    },
+    {
+      "Name": "Bosnia and Herzegovina",
+      "OfficialName": "Bosnia and Herzegovina",
+      "Alpha2Code": "BA",
+      "Alpha3Code": "BIH",
+      "CountryCode": 70,
+      "TopLevelDomain": ".ba"
+    },
+    {
+      "Name": "Botswana",
+      "OfficialName": "The Republic of Botswana",
+      "Alpha2Code": "BW",
+      "Alpha3Code": "BWA",
+      "CountryCode": 72,
+      "TopLevelDomain": ".bw"
+    },
+    {
+      "Name": "Bouvet Island",
+      "OfficialName": "Bouvet Island",
+      "Alpha2Code": "BV",
+      "Alpha3Code": "BVT",
+      "CountryCode": 74,
+      "TopLevelDomain": ".bv (ni)"
+    },
+    {
+      "Name": "Brazil",
+      "OfficialName": "The Federative Republic of Brazil",
+      "Alpha2Code": "BR",
+      "Alpha3Code": "BRA",
+      "CountryCode": 76,
+      "TopLevelDomain": ".br"
+    },
+    {
+      "Name": "British Indian Ocean Territory",
+      "OfficialName": "The British Indian Ocean Territory",
+      "Alpha2Code": "IO",
+      "Alpha3Code": "IOT",
+      "CountryCode": 86,
+      "TopLevelDomain": ".io"
+    },
+    {
+      "Name": "Brunei Darussalam",
+      "OfficialName": "The Nation of Brunei, the Abode of Peace",
+      "Alpha2Code": "BN",
+      "Alpha3Code": "BRN",
+      "CountryCode": 96,
+      "TopLevelDomain": ".bn"
+    },
+    {
+      "Name": "Bulgaria",
+      "OfficialName": "The Republic of Bulgaria",
+      "Alpha2Code": "BG",
+      "Alpha3Code": "BGR",
+      "CountryCode": 100,
+      "TopLevelDomain": ".bg"
+    },
+    {
+      "Name": "Burkina Faso",
+      "OfficialName": "Burkina Faso",
+      "Alpha2Code": "BF",
+      "Alpha3Code": "BFA",
+      "CountryCode": 854,
+      "TopLevelDomain": ".bf"
+    },
+    {
+      "Name": "Burundi",
+      "OfficialName": "The Republic of Burundi",
+      "Alpha2Code": "BI",
+      "Alpha3Code": "BDI",
+      "CountryCode": 108,
+      "TopLevelDomain": ".bi"
+    },
+    {
+      "Name": "Cabo Verde",
+      "OfficialName": "The Republic of Cabo Verde",
+      "Alpha2Code": "CV",
+      "Alpha3Code": "CPV",
+      "CountryCode": 132,
+      "TopLevelDomain": ".cv"
+    },
+    {
+      "Name": "Cambodia",
+      "OfficialName": "The Kingdom of Cambodia",
+      "Alpha2Code": "KH",
+      "Alpha3Code": "KHM",
+      "CountryCode": 116,
+      "TopLevelDomain": ".kh"
+    },
+    {
+      "Name": "Cameroon",
+      "OfficialName": "The Republic of Cameroon",
+      "Alpha2Code": "CM",
+      "Alpha3Code": "CMR",
+      "CountryCode": 120,
+      "TopLevelDomain": ".cm"
+    },
+    {
+      "Name": "Canada",
+      "OfficialName": "Canada",
+      "Alpha2Code": "CA",
+      "Alpha3Code": "CAN",
+      "CountryCode": 124,
+      "TopLevelDomain": ".ca"
+    },
+    {
+      "Name": "Cayman Islands",
+      "OfficialName": "The Cayman Islands",
+      "Alpha2Code": "KY",
+      "Alpha3Code": "CYM",
+      "CountryCode": 136,
+      "TopLevelDomain": ".ky"
+    },
+    {
+      "Name": "Central African Republic",
+      "OfficialName": "The Central African Republic",
+      "Alpha2Code": "CF",
+      "Alpha3Code": "CAF",
+      "CountryCode": 140,
+      "TopLevelDomain": ".cf"
+    },
+    {
+      "Name": "Chad",
+      "OfficialName": "The Republic of Chad",
+      "Alpha2Code": "TD",
+      "Alpha3Code": "TCD",
+      "CountryCode": 148,
+      "TopLevelDomain": ".td"
+    },
+    {
+      "Name": "Chile",
+      "OfficialName": "The Republic of Chile",
+      "Alpha2Code": "CL",
+      "Alpha3Code": "CHL",
+      "CountryCode": 152,
+      "TopLevelDomain": ".cl"
+    },
+    {
+      "Name": "China",
+      "OfficialName": "The People's Republic of China",
+      "Alpha2Code": "CN",
+      "Alpha3Code": "CHN",
+      "CountryCode": 156,
+      "TopLevelDomain": ".cn"
+    },
+    {
+      "Name": "Christmas Island",
+      "OfficialName": "The Territory of Christmas Island",
+      "Alpha2Code": "CX",
+      "Alpha3Code": "CXR",
+      "CountryCode": 162,
+      "TopLevelDomain": ".cx"
+    },
+    {
+      "Name": "Cocos (Keeling) Islands",
+      "OfficialName": "The Territory of Cocos (Keeling) Islands",
+      "Alpha2Code": "CC",
+      "Alpha3Code": "CCK",
+      "CountryCode": 166,
+      "TopLevelDomain": ".cc"
+    },
+    {
+      "Name": "Colombia",
+      "OfficialName": "The Republic of Colombia",
+      "Alpha2Code": "CO",
+      "Alpha3Code": "COL",
+      "CountryCode": 170,
+      "TopLevelDomain": ".co"
+    },
+    {
+      "Name": "Comoros",
+      "OfficialName": "The Union of the Comoros",
+      "Alpha2Code": "KM",
+      "Alpha3Code": "COM",
+      "CountryCode": 174,
+      "TopLevelDomain": ".km"
+    },
+    {
+      "Name": "Congo (The Democratic Republic of the Congo)",
+      "OfficialName": "The Democratic Republic of the Congo",
+      "Alpha2Code": "CD",
+      "Alpha3Code": "COD",
+      "CountryCode": 180,
+      "TopLevelDomain": ".cd"
+    },
+    {
+      "Name": "Congo (The Republic of the Congo)",
+      "OfficialName": "The Republic of the Congo",
+      "Alpha2Code": "CG",
+      "Alpha3Code": "COG",
+      "CountryCode": 178,
+      "TopLevelDomain": ".cg"
+    },
+    {
+      "Name": "Cook Islands ",
+      "OfficialName": "The Cook Islands",
+      "Alpha2Code": "CK",
+      "Alpha3Code": "COK",
+      "CountryCode": 184,
+      "TopLevelDomain": ".ck"
+    },
+    {
+      "Name": "Costa Rica",
+      "OfficialName": "The Republic of Costa Rica",
+      "Alpha2Code": "CR",
+      "Alpha3Code": "CRI",
+      "CountryCode": 188,
+      "TopLevelDomain": ".cr"
+    },
+    {
+      "Name": "Côte d'Ivoire",
+      "OfficialName": "The Republic of Côte d'Ivoire",
+      "Alpha2Code": "CI",
+      "Alpha3Code": "CIV",
+      "CountryCode": 384,
+      "TopLevelDomain": ".ci"
+    },
+    {
+      "Name": "Croatia",
+      "OfficialName": "The Republic of Croatia",
+      "Alpha2Code": "HR",
+      "Alpha3Code": "HRV",
+      "CountryCode": 191,
+      "TopLevelDomain": ".hr"
+    },
+    {
+      "Name": "Cuba",
+      "OfficialName": "The Republic of Cuba",
+      "Alpha2Code": "CU",
+      "Alpha3Code": "CUB",
+      "CountryCode": 192,
+      "TopLevelDomain": ".cu"
+    },
+    {
+      "Name": "Curaçao",
+      "OfficialName": "The Country of Curaçao",
+      "Alpha2Code": "CW",
+      "Alpha3Code": "CUW",
+      "CountryCode": 531,
+      "TopLevelDomain": ".cw"
+    },
+    {
+      "Name": "Cyprus",
+      "OfficialName": "The Republic of Cyprus",
+      "Alpha2Code": "CY",
+      "Alpha3Code": "CYP",
+      "CountryCode": 196,
+      "TopLevelDomain": ".cy"
+    },
+    {
+      "Name": "Czechia",
+      "OfficialName": "The Czech Republic",
+      "Alpha2Code": "CZ",
+      "Alpha3Code": "CZE",
+      "CountryCode": 203,
+      "TopLevelDomain": ".cz"
+    },
+    {
+      "Name": "Denmark",
+      "OfficialName": "The Kingdom of Denmark",
+      "Alpha2Code": "DK",
+      "Alpha3Code": "DNK",
+      "CountryCode": 208,
+      "TopLevelDomain": ".dk"
+    },
+    {
+      "Name": "Djibouti",
+      "OfficialName": "The Republic of Djibouti",
+      "Alpha2Code": "DJ",
+      "Alpha3Code": "DJI",
+      "CountryCode": 262,
+      "TopLevelDomain": ".dj"
+    },
+    {
+      "Name": "Dominica",
+      "OfficialName": "The Commonwealth of Dominica",
+      "Alpha2Code": "DM",
+      "Alpha3Code": "DMA",
+      "CountryCode": 212,
+      "TopLevelDomain": ".dm"
+    },
+    {
+      "Name": "Dominican Republic",
+      "OfficialName": "The Dominican Republic",
+      "Alpha2Code": "DO",
+      "Alpha3Code": "DOM",
+      "CountryCode": 214,
+      "TopLevelDomain": ".do"
+    },
+    {
+      "Name": "Ecuador",
+      "OfficialName": "The Republic of Ecuador",
+      "Alpha2Code": "EC",
+      "Alpha3Code": "ECU",
+      "CountryCode": 218,
+      "TopLevelDomain": ".ec"
+    },
+    {
+      "Name": "Egypt",
+      "OfficialName": "The Arab Republic of Egypt",
+      "Alpha2Code": "EG",
+      "Alpha3Code": "EGY",
+      "CountryCode": 818,
+      "TopLevelDomain": ".eg"
+    },
+    {
+      "Name": "El Salvador",
+      "OfficialName": "The Republic of El Salvador",
+      "Alpha2Code": "SV",
+      "Alpha3Code": "SLV",
+      "CountryCode": 222,
+      "TopLevelDomain": ".sv"
+    },
+    {
+      "Name": "Equatorial Guinea",
+      "OfficialName": "The Republic of Equatorial Guinea",
+      "Alpha2Code": "GQ",
+      "Alpha3Code": "GNQ",
+      "CountryCode": 226,
+      "TopLevelDomain": ".gq"
+    },
+    {
+      "Name": "Eritrea",
+      "OfficialName": "The State of Eritrea",
+      "Alpha2Code": "ER",
+      "Alpha3Code": "ERI",
+      "CountryCode": 232,
+      "TopLevelDomain": ".er"
+    },
+    {
+      "Name": "Estonia",
+      "OfficialName": "The Republic of Estonia",
+      "Alpha2Code": "EE",
+      "Alpha3Code": "EST",
+      "CountryCode": 233,
+      "TopLevelDomain": ".ee"
+    },
+    {
+      "Name": "Eswatin",
+      "OfficialName": "The Kingdom of Eswatini",
+      "Alpha2Code": "SZ",
+      "Alpha3Code": "SWZ",
+      "CountryCode": 748,
+      "TopLevelDomain": ".sz"
+    },
+    {
+      "Name": "Ethiopia",
+      "OfficialName": "The Federal Democratic Republic of Ethiopia",
+      "Alpha2Code": "ET",
+      "Alpha3Code": "ETH",
+      "CountryCode": 231,
+      "TopLevelDomain": ".et"
+    },
+    {
+      "Name": "Falkland Islands",
+      "OfficialName": "The Falkland Islands",
+      "Alpha2Code": "FK",
+      "Alpha3Code": "FLK",
+      "CountryCode": 238,
+      "TopLevelDomain": ".fk"
+    },
+    {
+      "Name": "Faroe Islands",
+      "OfficialName": "The Faroe Islands",
+      "Alpha2Code": "FO",
+      "Alpha3Code": "FRO",
+      "CountryCode": 234,
+      "TopLevelDomain": ".fo"
+    },
+    {
+      "Name": "Fiji",
+      "OfficialName": "The Republic of Fiji",
+      "Alpha2Code": "FJ",
+      "Alpha3Code": "FJI",
+      "CountryCode": 242,
+      "TopLevelDomain": ".fj"
+    },
+    {
+      "Name": "Finland",
+      "OfficialName": "The Republic of Finland",
+      "Alpha2Code": "FI",
+      "Alpha3Code": "FIN",
+      "CountryCode": 246,
+      "TopLevelDomain": ".fi"
+    },
+    {
+      "Name": "Franc",
+      "OfficialName": "The French Republic",
+      "Alpha2Code": "FR",
+      "Alpha3Code": "FRA",
+      "CountryCode": 250,
+      "TopLevelDomain": ".fr"
+    },
+    {
+      "Name": "French Guiana",
+      "OfficialName": "Guyane",
+      "Alpha2Code": "GF",
+      "Alpha3Code": "GUF",
+      "CountryCode": 254,
+      "TopLevelDomain": ".gf"
+    },
+    {
+      "Name": "French Polynesia",
+      "OfficialName": "French Polynesia",
+      "Alpha2Code": "PF",
+      "Alpha3Code": "PYF",
+      "CountryCode": 258,
+      "TopLevelDomain": ".pf"
+    },
+    {
+      "Name": "French Southern Territories",
+      "OfficialName": "The French Southern and Antarctic Lands",
+      "Alpha2Code": "TF",
+      "Alpha3Code": "ATF",
+      "CountryCode": 260,
+      "TopLevelDomain": ".tf"
+    },
+    {
+      "Name": "Gabon",
+      "OfficialName": "The Gabonese Republic",
+      "Alpha2Code": "GA",
+      "Alpha3Code": "GAB",
+      "CountryCode": 266,
+      "TopLevelDomain": ".ga"
+    },
+    {
+      "Name": "Gambia",
+      "OfficialName": "The Republic of The Gambia",
+      "Alpha2Code": "GM",
+      "Alpha3Code": "GMB",
+      "CountryCode": 270,
+      "TopLevelDomain": ".gm"
+    },
+    {
+      "Name": "Georgia",
+      "OfficialName": "Georgia",
+      "Alpha2Code": "GE",
+      "Alpha3Code": "GEO",
+      "CountryCode": 268,
+      "TopLevelDomain": ".ge"
+    },
+    {
+      "Name": "Germany",
+      "OfficialName": "The Federal Republic of Germany",
+      "Alpha2Code": "DE",
+      "Alpha3Code": "DEU",
+      "CountryCode": 276,
+      "TopLevelDomain": ".de"
+    },
+    {
+      "Name": "Ghana",
+      "OfficialName": "The Republic of Ghana",
+      "Alpha2Code": "GH",
+      "Alpha3Code": "GHA",
+      "CountryCode": 288,
+      "TopLevelDomain": ".gh"
+    },
+    {
+      "Name": "Gibraltar",
+      "OfficialName": "Gibraltar",
+      "Alpha2Code": "GI",
+      "Alpha3Code": "GIB",
+      "CountryCode": 292,
+      "TopLevelDomain": ".gi"
+    },
+    {
+      "Name": "Greece",
+      "OfficialName": "The Hellenic Republic",
+      "Alpha2Code": "GR",
+      "Alpha3Code": "GRC",
+      "CountryCode": 300,
+      "TopLevelDomain": ".gr"
+    },
+    {
+      "Name": "Greenland",
+      "OfficialName": "Kalaallit Nunaat",
+      "Alpha2Code": "GL",
+      "Alpha3Code": "GRL",
+      "CountryCode": 304,
+      "TopLevelDomain": ".gl"
+    },
+    {
+      "Name": "Grenada",
+      "OfficialName": "Grenada",
+      "Alpha2Code": "GD",
+      "Alpha3Code": "GRD",
+      "CountryCode": 308,
+      "TopLevelDomain": ".gd"
+    },
+    {
+      "Name": "Guadeloupe",
+      "OfficialName": "Guadeloupe",
+      "Alpha2Code": "GP",
+      "Alpha3Code": "GLP",
+      "CountryCode": 312,
+      "TopLevelDomain": ".gp"
+    },
+    {
+      "Name": "Guam",
+      "OfficialName": "The Territory of Guam",
+      "Alpha2Code": "GU",
+      "Alpha3Code": "GUM",
+      "CountryCode": 316,
+      "TopLevelDomain": ".gu"
+    },
+    {
+      "Name": "Guatemala",
+      "OfficialName": "The Republic of Guatemala",
+      "Alpha2Code": "GT",
+      "Alpha3Code": "GTM",
+      "CountryCode": 320,
+      "TopLevelDomain": ".gt"
+    },
+    {
+      "Name": "Guernsey",
+      "OfficialName": "The Bailiwick of Guernsey",
+      "Alpha2Code": "GG",
+      "Alpha3Code": "GGY",
+      "CountryCode": 831,
+      "TopLevelDomain": ".gg"
+    },
+    {
+      "Name": "Guinea",
+      "OfficialName": "The Republic of Guinea",
+      "Alpha2Code": "GN",
+      "Alpha3Code": "GIN",
+      "CountryCode": 324,
+      "TopLevelDomain": ".gn"
+    },
+    {
+      "Name": "Guinea-Bissau",
+      "OfficialName": "The Republic of Guinea-Bissau",
+      "Alpha2Code": "GW",
+      "Alpha3Code": "GNB",
+      "CountryCode": 624,
+      "TopLevelDomain": ".gw"
+    },
+    {
+      "Name": "Guyana",
+      "OfficialName": "The Co-operative Republic of Guyana",
+      "Alpha2Code": "GY",
+      "Alpha3Code": "GUY",
+      "CountryCode": 328,
+      "TopLevelDomain": ".gy"
+    },
+    {
+      "Name": "Haiti",
+      "OfficialName": "The Republic of Haiti",
+      "Alpha2Code": "HT",
+      "Alpha3Code": "HTI",
+      "CountryCode": 332,
+      "TopLevelDomain": ".ht"
+    },
+    {
+      "Name": "Heard Island and McDonald Islands",
+      "OfficialName": "The Territory of Heard Island and McDonald Islands",
+      "Alpha2Code": "HM",
+      "Alpha3Code": "HMD",
+      "CountryCode": 334,
+      "TopLevelDomain": ".hm"
+    },
+    {
+      "Name": "Holy See",
+      "OfficialName": "The Holy See",
+      "Alpha2Code": "VA",
+      "Alpha3Code": "VAT",
+      "CountryCode": 336,
+      "TopLevelDomain": ".va"
+    },
+    {
+      "Name": "Honduras",
+      "OfficialName": "The Republic of Honduras",
+      "Alpha2Code": "HN",
+      "Alpha3Code": "HND",
+      "CountryCode": 340,
+      "TopLevelDomain": ".hn"
+    },
+    {
+      "Name": "Hong Kong",
+      "OfficialName": "The Hong Kong Special Administrative Region of China",
+      "Alpha2Code": "HK",
+      "Alpha3Code": "HKG",
+      "CountryCode": 344,
+      "TopLevelDomain": ".hk"
+    },
+    {
+      "Name": "Hungary",
+      "OfficialName": "Hungary",
+      "Alpha2Code": "HU",
+      "Alpha3Code": "HUN",
+      "CountryCode": 348,
+      "TopLevelDomain": ".hu"
+    },
+    {
+      "Name": "Iceland",
+      "OfficialName": "Iceland",
+      "Alpha2Code": "IS",
+      "Alpha3Code": "ISL",
+      "CountryCode": 352,
+      "TopLevelDomain": ".is"
+    },
+    {
+      "Name": "India",
+      "OfficialName": "The Republic of India",
+      "Alpha2Code": "IN",
+      "Alpha3Code": "IND",
+      "CountryCode": 356,
+      "TopLevelDomain": ".in"
+    },
+    {
+      "Name": "Indonesia",
+      "OfficialName": "The Republic of Indonesia",
+      "Alpha2Code": "ID",
+      "Alpha3Code": "IDN",
+      "CountryCode": 360,
+      "TopLevelDomain": ".id"
+    },
+    {
+      "Name": "Iran (Islamic Republic of)",
+      "OfficialName": "The Islamic Republic of Iran",
+      "Alpha2Code": "IR",
+      "Alpha3Code": "IRN",
+      "CountryCode": 364,
+      "TopLevelDomain": ".ir"
+    },
+    {
+      "Name": "Iraq",
+      "OfficialName": "The Republic of Iraq",
+      "Alpha2Code": "IQ",
+      "Alpha3Code": "IRQ",
+      "CountryCode": 368,
+      "TopLevelDomain": ".iq"
+    },
+    {
+      "Name": "Ireland",
+      "OfficialName": "Ireland",
+      "Alpha2Code": "IE",
+      "Alpha3Code": "IRL",
+      "CountryCode": 372,
+      "TopLevelDomain": ".ie"
+    },
+    {
+      "Name": "Isle of Man",
+      "OfficialName": "The Isle of Man",
+      "Alpha2Code": "IM",
+      "Alpha3Code": "IMN",
+      "CountryCode": 833,
+      "TopLevelDomain": ".im"
+    },
+    {
+      "Name": "Israel",
+      "OfficialName": "The State of Israel",
+      "Alpha2Code": "IL",
+      "Alpha3Code": "ISR",
+      "CountryCode": 376,
+      "TopLevelDomain": ".il"
+    },
+    {
+      "Name": "Italy",
+      "OfficialName": "The Italian Republic",
+      "Alpha2Code": "IT",
+      "Alpha3Code": "ITA",
+      "CountryCode": 380,
+      "TopLevelDomain": ".it"
+    },
+    {
+      "Name": "Jamaica",
+      "OfficialName": "Jamaica",
+      "Alpha2Code": "JM",
+      "Alpha3Code": "JAM",
+      "CountryCode": 388,
+      "TopLevelDomain": ".jm"
+    },
+    {
+      "Name": "Japan",
+      "OfficialName": "Japan",
+      "Alpha2Code": "JP",
+      "Alpha3Code": "JPN",
+      "CountryCode": 392,
+      "TopLevelDomain": ".jp"
+    },
+    {
+      "Name": "Jersey",
+      "OfficialName": "The Bailiwick of Jersey",
+      "Alpha2Code": "JE",
+      "Alpha3Code": "JEY",
+      "CountryCode": 832,
+      "TopLevelDomain": ".je"
+    },
+    {
+      "Name": "Jordan",
+      "OfficialName": "The Hashemite Kingdom of Jordan",
+      "Alpha2Code": "JO",
+      "Alpha3Code": "JOR",
+      "CountryCode": 400,
+      "TopLevelDomain": ".jo"
+    },
+    {
+      "Name": "Kazakhstan",
+      "OfficialName": "The Republic of Kazakhstan",
+      "Alpha2Code": "KZ",
+      "Alpha3Code": "KAZ",
+      "CountryCode": 398,
+      "TopLevelDomain": ".kz"
+    },
+    {
+      "Name": "Kenya",
+      "OfficialName": "The Republic of Kenya",
+      "Alpha2Code": "KE",
+      "Alpha3Code": "KEN",
+      "CountryCode": 404,
+      "TopLevelDomain": ".ke"
+    },
+    {
+      "Name": "Kiribati",
+      "OfficialName": "The Republic of Kiribati",
+      "Alpha2Code": "KI",
+      "Alpha3Code": "KIR",
+      "CountryCode": 296,
+      "TopLevelDomain": ".ki"
+    },
+    {
+      "Name": "North Korea",
+      "OfficialName": "The Democratic People's Republic of Korea",
+      "Alpha2Code": "KP",
+      "Alpha3Code": "PRK",
+      "CountryCode": 408,
+      "TopLevelDomain": ".kp"
+    },
+    {
+      "Name": "South Korea",
+      "OfficialName": "The Republic of Korea",
+      "Alpha2Code": "KR",
+      "Alpha3Code": "KOR",
+      "CountryCode": 410,
+      "TopLevelDomain": ".kr"
+    },
+    {
+      "Name": "Kuwait",
+      "OfficialName": "The State of Kuwait",
+      "Alpha2Code": "KW",
+      "Alpha3Code": "KWT",
+      "CountryCode": 414,
+      "TopLevelDomain": ".kw"
+    },
+    {
+      "Name": "Kyrgyzstan",
+      "OfficialName": "The Kyrgyz Republic",
+      "Alpha2Code": "KG",
+      "Alpha3Code": "KGZ",
+      "CountryCode": 417,
+      "TopLevelDomain": ".kg"
+    },
+    {
+      "Name": "Lao People's Democratic Republic",
+      "OfficialName": "The Lao People's Democratic Republic",
+      "Alpha2Code": "LA",
+      "Alpha3Code": "LAO",
+      "CountryCode": 418,
+      "TopLevelDomain": ".la"
+    },
+    {
+      "Name": "Latvia",
+      "OfficialName": "The Republic of Latvia",
+      "Alpha2Code": "LV",
+      "Alpha3Code": "LVA",
+      "CountryCode": 428,
+      "TopLevelDomain": ".lv"
+    },
+    {
+      "Name": "Lebanon",
+      "OfficialName": "The Lebanese Republic",
+      "Alpha2Code": "LB",
+      "Alpha3Code": "LBN",
+      "CountryCode": 422,
+      "TopLevelDomain": ".lb"
+    },
+    {
+      "Name": "Lesotho",
+      "OfficialName": "The Kingdom of Lesotho",
+      "Alpha2Code": "LS",
+      "Alpha3Code": "LSO",
+      "CountryCode": 426,
+      "TopLevelDomain": ".ls"
+    },
+    {
+      "Name": "Liberia",
+      "OfficialName": "The Republic of Liberia",
+      "Alpha2Code": "LR",
+      "Alpha3Code": "LBR",
+      "CountryCode": 430,
+      "TopLevelDomain": ".lr"
+    },
+    {
+      "Name": "Libya",
+      "OfficialName": "The State of Libya",
+      "Alpha2Code": "LY",
+      "Alpha3Code": "LBY",
+      "CountryCode": 434,
+      "TopLevelDomain": ".ly"
+    },
+    {
+      "Name": "Liechtenstein",
+      "OfficialName": "The Principality of Liechtenstein",
+      "Alpha2Code": "LI",
+      "Alpha3Code": "LIE",
+      "CountryCode": 438,
+      "TopLevelDomain": ".li"
+    },
+    {
+      "Name": "Lithuania",
+      "OfficialName": "The Republic of Lithuania",
+      "Alpha2Code": "LT",
+      "Alpha3Code": "LTU",
+      "CountryCode": 440,
+      "TopLevelDomain": ".lt"
+    },
+    {
+      "Name": "Luxembourg",
+      "OfficialName": "The Grand Duchy of Luxembourg",
+      "Alpha2Code": "LU",
+      "Alpha3Code": "LUX",
+      "CountryCode": 442,
+      "TopLevelDomain": ".lu"
+    },
+    {
+      "Name": "Macao",
+      "OfficialName": "The Macao Special Administrative Region of China",
+      "Alpha2Code": "MO",
+      "Alpha3Code": "MAC",
+      "CountryCode": 446,
+      "TopLevelDomain": ".mo"
+    },
+    {
+      "Name": "Madagascar",
+      "OfficialName": "The Republic of Madagascar",
+      "Alpha2Code": "MG",
+      "Alpha3Code": "MDG",
+      "CountryCode": 450,
+      "TopLevelDomain": ".mg"
+    },
+    {
+      "Name": "Malawi",
+      "OfficialName": "The Republic of Malawi",
+      "Alpha2Code": "MW",
+      "Alpha3Code": "MWI",
+      "CountryCode": 454,
+      "TopLevelDomain": ".mw"
+    },
+    {
+      "Name": "Malaysia",
+      "OfficialName": "Malaysia",
+      "Alpha2Code": "MY",
+      "Alpha3Code": "MYS",
+      "CountryCode": 458,
+      "TopLevelDomain": ".my"
+    },
+    {
+      "Name": "Maldives",
+      "OfficialName": "The Republic of Maldives",
+      "Alpha2Code": "MV",
+      "Alpha3Code": "MDV",
+      "CountryCode": 462,
+      "TopLevelDomain": ".mv"
+    },
+    {
+      "Name": "Mali",
+      "OfficialName": "The Republic of Mali",
+      "Alpha2Code": "ML",
+      "Alpha3Code": "MLI",
+      "CountryCode": 466,
+      "TopLevelDomain": ".ml"
+    },
+    {
+      "Name": "Malta",
+      "OfficialName": "The Republic of Malta",
+      "Alpha2Code": "MT",
+      "Alpha3Code": "MLT",
+      "CountryCode": 470,
+      "TopLevelDomain": ".mt"
+    },
+    {
+      "Name": "Marshall Islands",
+      "OfficialName": "The Republic of the Marshall Islands",
+      "Alpha2Code": "MH",
+      "Alpha3Code": "MHL",
+      "CountryCode": 584,
+      "TopLevelDomain": ".mh"
+    },
+    {
+      "Name": "Martinique",
+      "OfficialName": "Martinique",
+      "Alpha2Code": "MQ",
+      "Alpha3Code": "MTQ",
+      "CountryCode": 474,
+      "TopLevelDomain": ".mq"
+    },
+    {
+      "Name": "Mauritania",
+      "OfficialName": "The Islamic Republic of Mauritania",
+      "Alpha2Code": "MR",
+      "Alpha3Code": "MRT",
+      "CountryCode": 478,
+      "TopLevelDomain": ".mr"
+    },
+    {
+      "Name": "Mauritius",
+      "OfficialName": "The Republic of Mauritius",
+      "Alpha2Code": "MU",
+      "Alpha3Code": "MUS",
+      "CountryCode": 480,
+      "TopLevelDomain": ".mu"
+    },
+    {
+      "Name": "Mayotte",
+      "OfficialName": "The Department of Mayotte",
+      "Alpha2Code": "YT",
+      "Alpha3Code": "MYT",
+      "CountryCode": 175,
+      "TopLevelDomain": ".yt"
+    },
+    {
+      "Name": "Mexico",
+      "OfficialName": "The United Mexican States",
+      "Alpha2Code": "MX",
+      "Alpha3Code": "MEX",
+      "CountryCode": 484,
+      "TopLevelDomain": ".mx"
+    },
+    {
+      "Name": "Micronesia",
+      "OfficialName": "The Federated States of Micronesia",
+      "Alpha2Code": "FM",
+      "Alpha3Code": "FSM",
+      "CountryCode": 583,
+      "TopLevelDomain": ".fm"
+    },
+    {
+      "Name": "Moldova",
+      "OfficialName": "The Republic of Moldova",
+      "Alpha2Code": "MD",
+      "Alpha3Code": "MDA",
+      "CountryCode": 498,
+      "TopLevelDomain": ".md"
+    },
+    {
+      "Name": "Monaco",
+      "OfficialName": "The Principality of Monaco",
+      "Alpha2Code": "MC",
+      "Alpha3Code": "MCO",
+      "CountryCode": 492,
+      "TopLevelDomain": ".mc"
+    },
+    {
+      "Name": "Mongolia",
+      "OfficialName": "Mongolia",
+      "Alpha2Code": "MN",
+      "Alpha3Code": "MNG",
+      "CountryCode": 496,
+      "TopLevelDomain": ".mn"
+    },
+    {
+      "Name": "Montenegro",
+      "OfficialName": "Montenegro",
+      "Alpha2Code": "ME",
+      "Alpha3Code": "MNE",
+      "CountryCode": 499,
+      "TopLevelDomain": ".me"
+    },
+    {
+      "Name": "Montserrat",
+      "OfficialName": "Montserrat",
+      "Alpha2Code": "MS",
+      "Alpha3Code": "MSR",
+      "CountryCode": 500,
+      "TopLevelDomain": ".ms"
+    },
+    {
+      "Name": "Morocco",
+      "OfficialName": "The Kingdom of Morocco",
+      "Alpha2Code": "MA",
+      "Alpha3Code": "MAR",
+      "CountryCode": 504,
+      "TopLevelDomain": ".ma"
+    },
+    {
+      "Name": "Mozambique",
+      "OfficialName": "The Republic of Mozambique",
+      "Alpha2Code": "MZ",
+      "Alpha3Code": "MOZ",
+      "CountryCode": 508,
+      "TopLevelDomain": ".mz"
+    },
+    {
+      "Name": "Myanmar",
+      "OfficialName": "The Republic of the Union of Myanmar",
+      "Alpha2Code": "MM",
+      "Alpha3Code": "MMR",
+      "CountryCode": 104,
+      "TopLevelDomain": ".mm"
+    },
+    {
+      "Name": "Namibia",
+      "OfficialName": "The Republic of Namibia",
+      "Alpha2Code": "NA",
+      "Alpha3Code": "NAM",
+      "CountryCode": 516,
+      "TopLevelDomain": ".na"
+    },
+    {
+      "Name": "Nauru",
+      "OfficialName": "The Republic of Nauru",
+      "Alpha2Code": "NR",
+      "Alpha3Code": "NRU",
+      "CountryCode": 520,
+      "TopLevelDomain": ".nr"
+    },
+    {
+      "Name": "Nepal",
+      "OfficialName": "The Federal Democratic Republic of Nepal",
+      "Alpha2Code": "NP",
+      "Alpha3Code": "NPL",
+      "CountryCode": 524,
+      "TopLevelDomain": ".np"
+    },
+    {
+      "Name": "Netherlands, Kingdom of the",
+      "OfficialName": "The Kingdom of the Netherlands",
+      "Alpha2Code": "NL",
+      "Alpha3Code": "NLD",
+      "CountryCode": 528,
+      "TopLevelDomain": ".nl"
+    },
+    {
+      "Name": "New Caledonia",
+      "OfficialName": "New Caledonia",
+      "Alpha2Code": "NC",
+      "Alpha3Code": "NCL",
+      "CountryCode": 540,
+      "TopLevelDomain": ".nc"
+    },
+    {
+      "Name": "New Zealand",
+      "OfficialName": "New Zealand",
+      "Alpha2Code": "NZ",
+      "Alpha3Code": "NZL",
+      "CountryCode": 554,
+      "TopLevelDomain": ".nz"
+    },
+    {
+      "Name": "Nicaragua",
+      "OfficialName": "The Republic of Nicaragua",
+      "Alpha2Code": "NI",
+      "Alpha3Code": "NIC",
+      "CountryCode": 558,
+      "TopLevelDomain": ".ni"
+    },
+    {
+      "Name": "Niger",
+      "OfficialName": "The Republic of the Niger",
+      "Alpha2Code": "NE",
+      "Alpha3Code": "NER",
+      "CountryCode": 562,
+      "TopLevelDomain": ".ne"
+    },
+    {
+      "Name": "Nigeria",
+      "OfficialName": "The Federal Republic of Nigeria",
+      "Alpha2Code": "NG",
+      "Alpha3Code": "NGA",
+      "CountryCode": 566,
+      "TopLevelDomain": ".ng"
+    },
+    {
+      "Name": "Niue",
+      "OfficialName": "Niue",
+      "Alpha2Code": "NU",
+      "Alpha3Code": "NIU",
+      "CountryCode": 570,
+      "TopLevelDomain": ".nu"
+    },
+    {
+      "Name": "Norfolk Island",
+      "OfficialName": "The Territory of Norfolk Island",
+      "Alpha2Code": "NF",
+      "Alpha3Code": "NFK",
+      "CountryCode": 574,
+      "TopLevelDomain": ".nf"
+    },
+    {
+      "Name": "North Macedonia",
+      "OfficialName": "The Republic of North Macedonia",
+      "Alpha2Code": "MK",
+      "Alpha3Code": "MKD",
+      "CountryCode": 807,
+      "TopLevelDomain": ".mk"
+    },
+    {
+      "Name": "Northern Mariana Islands",
+      "OfficialName": "The Commonwealth of the Northern Mariana Islands",
+      "Alpha2Code": "MP",
+      "Alpha3Code": "MNP",
+      "CountryCode": 580,
+      "TopLevelDomain": ".mp"
+    },
+    {
+      "Name": "Norway",
+      "OfficialName": "The Kingdom of Norway",
+      "Alpha2Code": "NO",
+      "Alpha3Code": "NOR",
+      "CountryCode": 578,
+      "TopLevelDomain": ".no"
+    },
+    {
+      "Name": "Oman",
+      "OfficialName": "The Sultanate of Oman",
+      "Alpha2Code": "OM",
+      "Alpha3Code": "OMN",
+      "CountryCode": 512,
+      "TopLevelDomain": ".om"
+    },
+    {
+      "Name": "Pakistan",
+      "OfficialName": "The Islamic Republic of Pakistan",
+      "Alpha2Code": "PK",
+      "Alpha3Code": "PAK",
+      "CountryCode": 586,
+      "TopLevelDomain": ".pk"
+    },
+    {
+      "Name": "Palau",
+      "OfficialName": "The Republic of Palau",
+      "Alpha2Code": "PW",
+      "Alpha3Code": "PLW",
+      "CountryCode": 585,
+      "TopLevelDomain": ".pw"
+    },
+    {
+      "Name": "Palestine, State of",
+      "OfficialName": "The State of Palestine",
+      "Alpha2Code": "PS",
+      "Alpha3Code": "PSE",
+      "CountryCode": 275,
+      "TopLevelDomain": ".ps"
+    },
+    {
+      "Name": "Panama",
+      "OfficialName": "The Republic of Panamá",
+      "Alpha2Code": "PA",
+      "Alpha3Code": "PAN",
+      "CountryCode": 591,
+      "TopLevelDomain": ".pa"
+    },
+    {
+      "Name": "Papua New Guinea",
+      "OfficialName": "The Independent State of Papua New Guinea",
+      "Alpha2Code": "PG",
+      "Alpha3Code": "PNG",
+      "CountryCode": 598,
+      "TopLevelDomain": ".pg"
+    },
+    {
+      "Name": "Paraguay",
+      "OfficialName": "The Republic of Paraguay",
+      "Alpha2Code": "PY",
+      "Alpha3Code": "PRY",
+      "CountryCode": 600,
+      "TopLevelDomain": ".py"
+    },
+    {
+      "Name": "Peru",
+      "OfficialName": "The Republic of Perú",
+      "Alpha2Code": "PE",
+      "Alpha3Code": "PER",
+      "CountryCode": 604,
+      "TopLevelDomain": ".pe"
+    },
+    {
+      "Name": "Philippines",
+      "OfficialName": "The Republic of the Philippines",
+      "Alpha2Code": "PH",
+      "Alpha3Code": "PHL",
+      "CountryCode": 608,
+      "TopLevelDomain": ".ph"
+    },
+    {
+      "Name": "Pitcairn",
+      "OfficialName": "The Pitcairn, Henderson, Ducie and Oeno Islands",
+      "Alpha2Code": "PN",
+      "Alpha3Code": "PCN",
+      "CountryCode": 612,
+      "TopLevelDomain": ".pn"
+    },
+    {
+      "Name": "Poland",
+      "OfficialName": "The Republic of Poland",
+      "Alpha2Code": "PL",
+      "Alpha3Code": "POL",
+      "CountryCode": 616,
+      "TopLevelDomain": ".pl"
+    },
+    {
+      "Name": "Portugal",
+      "OfficialName": "The Portuguese Republic",
+      "Alpha2Code": "PT",
+      "Alpha3Code": "PRT",
+      "CountryCode": 620,
+      "TopLevelDomain": ".pt"
+    },
+    {
+      "Name": "Puerto Rico",
+      "OfficialName": "The Commonwealth of Puerto Rico",
+      "Alpha2Code": "PR",
+      "Alpha3Code": "PRI",
+      "CountryCode": 630,
+      "TopLevelDomain": ".pr"
+    },
+    {
+      "Name": "Qatar",
+      "OfficialName": "The State of Qatar",
+      "Alpha2Code": "QA",
+      "Alpha3Code": "QAT",
+      "CountryCode": 634,
+      "TopLevelDomain": ".qa"
+    },
+    {
+      "Name": "Réunion",
+      "OfficialName": "Réunion",
+      "Alpha2Code": "RE",
+      "Alpha3Code": "REU",
+      "CountryCode": 638,
+      "TopLevelDomain": ".re"
+    },
+    {
+      "Name": "Romania",
+      "OfficialName": "Romania",
+      "Alpha2Code": "RO",
+      "Alpha3Code": "ROU",
+      "CountryCode": 642,
+      "TopLevelDomain": ".ro"
+    },
+    {
+      "Name": "Russian Federation",
+      "OfficialName": "The Russian Federation",
+      "Alpha2Code": "RU",
+      "Alpha3Code": "RUS",
+      "CountryCode": 643,
+      "TopLevelDomain": ".ru"
+    },
+    {
+      "Name": "Rwanda",
+      "OfficialName": "The Republic of Rwanda",
+      "Alpha2Code": "RW",
+      "Alpha3Code": "RWA",
+      "CountryCode": 646,
+      "TopLevelDomain": ".rw"
+    },
+    {
+      "Name": "Saint Barthélemy",
+      "OfficialName": "The Collectivity of Saint-Barthélemy",
+      "Alpha2Code": "BL",
+      "Alpha3Code": "BLM",
+      "CountryCode": 652,
+      "TopLevelDomain": ".bl"
+    },
+    {
+      "Name": "Saint Helena, Ascension Island, Tristan da Cunha",
+      "OfficialName": "Saint Helena, Ascension and Tristan da Cunha",
+      "Alpha2Code": "SH",
+      "Alpha3Code": "SHN",
+      "CountryCode": 654,
+      "TopLevelDomain": ".sh"
+    },
+    {
+      "Name": "Saint Kitts and Nevis",
+      "OfficialName": "Saint Kitts and Nevis",
+      "Alpha2Code": "KN",
+      "Alpha3Code": "KNA",
+      "CountryCode": 659,
+      "TopLevelDomain": ".kn"
+    },
+    {
+      "Name": "Saint Lucia",
+      "OfficialName": "Saint Lucia",
+      "Alpha2Code": "LC",
+      "Alpha3Code": "LCA",
+      "CountryCode": 662,
+      "TopLevelDomain": ".lc"
+    },
+    {
+      "Name": "Saint Martin (French part)",
+      "OfficialName": "The Collectivity of Saint-Martin",
+      "Alpha2Code": "MF",
+      "Alpha3Code": "MAF",
+      "CountryCode": 663,
+      "TopLevelDomain": ".mf"
+    },
+    {
+      "Name": "Saint Pierre and Miquelon",
+      "OfficialName": "The Overseas Collectivity of Saint-Pierre and Miquelon",
+      "Alpha2Code": "PM",
+      "Alpha3Code": "SPM",
+      "CountryCode": 666,
+      "TopLevelDomain": ".pm"
+    },
+    {
+      "Name": "Saint Vincent and the Grenadines",
+      "OfficialName": "Saint Vincent and the Grenadines",
+      "Alpha2Code": "VC",
+      "Alpha3Code": "VCT",
+      "CountryCode": 670,
+      "TopLevelDomain": ".vc"
+    },
+    {
+      "Name": "Samoa",
+      "OfficialName": "The Independent State of Samoa",
+      "Alpha2Code": "WS",
+      "Alpha3Code": "WSM",
+      "CountryCode": 882,
+      "TopLevelDomain": ".ws"
+    },
+    {
+      "Name": "San Marino",
+      "OfficialName": "The Republic of San Marino",
+      "Alpha2Code": "SM",
+      "Alpha3Code": "SMR",
+      "CountryCode": 674,
+      "TopLevelDomain": ".sm"
+    },
+    {
+      "Name": "Sao Tome and Principe",
+      "OfficialName": "The Democratic Republic of São Tomé and Príncipe",
+      "Alpha2Code": "ST",
+      "Alpha3Code": "STP",
+      "CountryCode": 678,
+      "TopLevelDomain": ".st"
+    },
+    {
+      "Name": "Saudi Arabia",
+      "OfficialName": "The Kingdom of Saudi Arabia",
+      "Alpha2Code": "SA",
+      "Alpha3Code": "SAU",
+      "CountryCode": 682,
+      "TopLevelDomain": ".sa"
+    },
+    {
+      "Name": "Senegal",
+      "OfficialName": "The Republic of Senegal",
+      "Alpha2Code": "SN",
+      "Alpha3Code": "SEN",
+      "CountryCode": 686,
+      "TopLevelDomain": ".sn"
+    },
+    {
+      "Name": "Serbia",
+      "OfficialName": "The Republic of Serbia",
+      "Alpha2Code": "RS",
+      "Alpha3Code": "SRB",
+      "CountryCode": 688,
+      "TopLevelDomain": ".rs"
+    },
+    {
+      "Name": "Seychelles",
+      "OfficialName": "The Republic of Seychelles",
+      "Alpha2Code": "SC",
+      "Alpha3Code": "SYC",
+      "CountryCode": 690,
+      "TopLevelDomain": ".sc"
+    },
+    {
+      "Name": "Sierra Leone",
+      "OfficialName": "The Republic of Sierra Leone",
+      "Alpha2Code": "SL",
+      "Alpha3Code": "SLE",
+      "CountryCode": 694,
+      "TopLevelDomain": ".sl"
+    },
+    {
+      "Name": "Singapore",
+      "OfficialName": "The Republic of Singapore",
+      "Alpha2Code": "SG",
+      "Alpha3Code": "SGP",
+      "CountryCode": 702,
+      "TopLevelDomain": ".sg"
+    },
+    {
+      "Name": "Sint Maarten (Dutch part)",
+      "OfficialName": "Sint Maarten",
+      "Alpha2Code": "SX",
+      "Alpha3Code": "SXM",
+      "CountryCode": 534,
+      "TopLevelDomain": ".sx"
+    },
+    {
+      "Name": "Slovakia",
+      "OfficialName": "The Slovak Republic",
+      "Alpha2Code": "SK",
+      "Alpha3Code": "SVK",
+      "CountryCode": 703,
+      "TopLevelDomain": ".sk"
+    },
+    {
+      "Name": "Slovenia",
+      "OfficialName": "The Republic of Slovenia",
+      "Alpha2Code": "SI",
+      "Alpha3Code": "SVN",
+      "CountryCode": 705,
+      "TopLevelDomain": ".si"
+    },
+    {
+      "Name": "Solomon Islands",
+      "OfficialName": "The Solomon Islands",
+      "Alpha2Code": "SB",
+      "Alpha3Code": "SLB",
+      "CountryCode": 90,
+      "TopLevelDomain": ".sb"
+    },
+    {
+      "Name": "Somalia",
+      "OfficialName": "The Federal Republic of Somalia",
+      "Alpha2Code": "SO",
+      "Alpha3Code": "SOM",
+      "CountryCode": 706,
+      "TopLevelDomain": ".so"
+    },
+    {
+      "Name": "South Africa",
+      "OfficialName": "The Republic of South Africa",
+      "Alpha2Code": "ZA",
+      "Alpha3Code": "ZAF",
+      "CountryCode": 710,
+      "TopLevelDomain": ".za"
+    },
+    {
+      "Name": "South Georgia and the South Sandwich Islands",
+      "OfficialName": "South Georgia and the South Sandwich Islands",
+      "Alpha2Code": "GS",
+      "Alpha3Code": "SGS",
+      "CountryCode": 239,
+      "TopLevelDomain": ".gs"
+    },
+    {
+      "Name": "South Sudan",
+      "OfficialName": "The Republic of South Sudan",
+      "Alpha2Code": "SS",
+      "Alpha3Code": "SSD",
+      "CountryCode": 728,
+      "TopLevelDomain": ".ss"
+    },
+    {
+      "Name": "Spain",
+      "OfficialName": "The Kingdom of Spain",
+      "Alpha2Code": "ES",
+      "Alpha3Code": "ESP",
+      "CountryCode": 724,
+      "TopLevelDomain": ".es"
+    },
+    {
+      "Name": "Sri Lanka",
+      "OfficialName": "The Democratic Socialist Republic of Sri Lanka",
+      "Alpha2Code": "LK",
+      "Alpha3Code": "LKA",
+      "CountryCode": 144,
+      "TopLevelDomain": ".lk"
+    },
+    {
+      "Name": "Sudan",
+      "OfficialName": "The Republic of the Sudan",
+      "Alpha2Code": "SD",
+      "Alpha3Code": "SDN",
+      "CountryCode": 729,
+      "TopLevelDomain": ".sd"
+    },
+    {
+      "Name": "Suriname",
+      "OfficialName": "The Republic of Suriname",
+      "Alpha2Code": "SR",
+      "Alpha3Code": "SUR",
+      "CountryCode": 740,
+      "TopLevelDomain": ".sr"
+    },
+    {
+      "Name": "Svalbard and Jan Mayen",
+      "OfficialName": "Svalbard and Jan Mayen",
+      "Alpha2Code": "SJ",
+      "Alpha3Code": "SJM",
+      "CountryCode": 744,
+      "TopLevelDomain": ".sj (ni)"
+    },
+    {
+      "Name": "Sweden",
+      "OfficialName": "The Kingdom of Sweden",
+      "Alpha2Code": "SE",
+      "Alpha3Code": "SWE",
+      "CountryCode": 752,
+      "TopLevelDomain": ".se"
+    },
+    {
+      "Name": "Switzerland",
+      "OfficialName": "The Swiss Confederation",
+      "Alpha2Code": "CH",
+      "Alpha3Code": "CHE",
+      "CountryCode": 756,
+      "TopLevelDomain": ".ch"
+    },
+    {
+      "Name": "Syrian Arab Republic",
+      "OfficialName": "The Syrian Arab Republic",
+      "Alpha2Code": "SY",
+      "Alpha3Code": "SYR",
+      "CountryCode": 760,
+      "TopLevelDomain": ".sy"
+    },
+    {
+      "Name": "Taiwan (Province of China)",
+      "OfficialName": "The Republic of China",
+      "Alpha2Code": "TW",
+      "Alpha3Code": "TWN",
+      "CountryCode": 158,
+      "TopLevelDomain": ".tw"
+    },
+    {
+      "Name": "Tajikistan",
+      "OfficialName": "The Republic of Tajikistan",
+      "Alpha2Code": "TJ",
+      "Alpha3Code": "TJK",
+      "CountryCode": 762,
+      "TopLevelDomain": ".tj"
+    },
+    {
+      "Name": "Tanzania",
+      "OfficialName": "The United Republic of Tanzania",
+      "Alpha2Code": "TZ",
+      "Alpha3Code": "TZA",
+      "CountryCode": 834,
+      "TopLevelDomain": ".tz"
+    },
+    {
+      "Name": "Thailand",
+      "OfficialName": "The Kingdom of Thailand",
+      "Alpha2Code": "TH",
+      "Alpha3Code": "THA",
+      "CountryCode": 764,
+      "TopLevelDomain": ".th"
+    },
+    {
+      "Name": "Timor-Leste",
+      "OfficialName": "The Democratic Republic of Timor-Leste",
+      "Alpha2Code": "TL",
+      "Alpha3Code": "TLS",
+      "CountryCode": 626,
+      "TopLevelDomain": ".tl"
+    },
+    {
+      "Name": "Togo",
+      "OfficialName": "The Togolese Republic",
+      "Alpha2Code": "TG",
+      "Alpha3Code": "TGO",
+      "CountryCode": 768,
+      "TopLevelDomain": ".tg"
+    },
+    {
+      "Name": "Tokelau",
+      "OfficialName": "Tokelau",
+      "Alpha2Code": "TK",
+      "Alpha3Code": "TKL",
+      "CountryCode": 772,
+      "TopLevelDomain": ".tk"
+    },
+    {
+      "Name": "Tonga",
+      "OfficialName": "The Kingdom of Tonga",
+      "Alpha2Code": "TO",
+      "Alpha3Code": "TON",
+      "CountryCode": 776,
+      "TopLevelDomain": ".to"
+    },
+    {
+      "Name": "Trinidad and Tobago",
+      "OfficialName": "The Republic of Trinidad and Tobago",
+      "Alpha2Code": "TT",
+      "Alpha3Code": "TTO",
+      "CountryCode": 780,
+      "TopLevelDomain": ".tt"
+    },
+    {
+      "Name": "Tunisia",
+      "OfficialName": "The Republic of Tunisia",
+      "Alpha2Code": "TN",
+      "Alpha3Code": "TUN",
+      "CountryCode": 788,
+      "TopLevelDomain": ".tn"
+    },
+    {
+      "Name": "Türkiye",
+      "OfficialName": "The Republic of Türkiye",
+      "Alpha2Code": "TR",
+      "Alpha3Code": "TUR",
+      "CountryCode": 792,
+      "TopLevelDomain": ".tr"
+    },
+    {
+      "Name": "Turkmenistan",
+      "OfficialName": "Turkmenistan",
+      "Alpha2Code": "TM",
+      "Alpha3Code": "TKM",
+      "CountryCode": 795,
+      "TopLevelDomain": ".tm"
+    },
+    {
+      "Name": "Turks and Caicos Islands ",
+      "OfficialName": "The Turks and Caicos Islands",
+      "Alpha2Code": "TC",
+      "Alpha3Code": "TCA",
+      "CountryCode": 796,
+      "TopLevelDomain": ".tc"
+    },
+    {
+      "Name": "Tuvalu",
+      "OfficialName": "Tuvalu",
+      "Alpha2Code": "TV",
+      "Alpha3Code": "TUV",
+      "CountryCode": 798,
+      "TopLevelDomain": ".tv"
+    },
+    {
+      "Name": "Uganda",
+      "OfficialName": "The Republic of Uganda",
+      "Alpha2Code": "UG",
+      "Alpha3Code": "UGA",
+      "CountryCode": 800,
+      "TopLevelDomain": ".ug"
+    },
+    {
+      "Name": "Ukraine",
+      "OfficialName": "Ukraine",
+      "Alpha2Code": "UA",
+      "Alpha3Code": "UKR",
+      "CountryCode": 804,
+      "TopLevelDomain": ".ua"
+    },
+    {
+      "Name": "United Arab Emirates ",
+      "OfficialName": "The United Arab Emirates",
+      "Alpha2Code": "AE",
+      "Alpha3Code": "ARE",
+      "CountryCode": 784,
+      "TopLevelDomain": ".ae"
+    },
+    {
+      "Name": "United Kingdom of Great Britain and Northern Ireland ",
+      "OfficialName": "The United Kingdom of Great Britain and Northern Ireland",
+      "Alpha2Code": "GB",
+      "Alpha3Code": "GBR",
+      "CountryCode": 826,
+      "TopLevelDomain": ".gb.uk"
+    },
+    {
+      "Name": "United States Minor Outlying Islands ",
+      "OfficialName": "Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Atoll, Navassa Island, Palmyra Atoll, and Wake Island",
+      "Alpha2Code": "UM",
+      "Alpha3Code": "UMI",
+      "CountryCode": 581,
+      "TopLevelDomain": ".um (ni)"
+    },
+    {
+      "Name": "United States of America",
+      "OfficialName": "The United States of America",
+      "Alpha2Code": "US",
+      "Alpha3Code": "USA",
+      "CountryCode": 840,
+      "TopLevelDomain": ".us"
+    },
+    {
+      "Name": "Uruguay",
+      "OfficialName": "The Oriental Republic of Uruguay",
+      "Alpha2Code": "UY",
+      "Alpha3Code": "URY",
+      "CountryCode": 858,
+      "TopLevelDomain": ".uy"
+    },
+    {
+      "Name": "Uzbekistan",
+      "OfficialName": "The Republic of Uzbekistan",
+      "Alpha2Code": "UZ",
+      "Alpha3Code": "UZB",
+      "CountryCode": 860,
+      "TopLevelDomain": ".uz"
+    },
+    {
+      "Name": "Vanuatu",
+      "OfficialName": "The Republic of Vanuatu",
+      "Alpha2Code": "VU",
+      "Alpha3Code": "VUT",
+      "CountryCode": 548,
+      "TopLevelDomain": ".vu"
+    },
+    {
+      "Name": "Venezuela",
+      "OfficialName": "The Bolivarian Republic of Venezuela",
+      "Alpha2Code": "VE",
+      "Alpha3Code": "VEN",
+      "CountryCode": 862,
+      "TopLevelDomain": ".ve"
+    },
+    {
+      "Name": "Viet Nam",
+      "OfficialName": "The Socialist Republic of Viet Nam",
+      "Alpha2Code": "VN",
+      "Alpha3Code": "VNM",
+      "CountryCode": 704,
+      "TopLevelDomain": ".vn"
+    },
+    {
+      "Name": "Virgin Islands (British)",
+      "OfficialName": "The Virgin Islands",
+      "Alpha2Code": "VG",
+      "Alpha3Code": "VGB",
+      "CountryCode": 92,
+      "TopLevelDomain": ".vg"
+    },
+    {
+      "Name": "Virgin Islands (U.S)",
+      "OfficialName": "The Virgin Islands of the United States",
+      "Alpha2Code": "VI",
+      "Alpha3Code": "VIR",
+      "CountryCode": 850,
+      "TopLevelDomain": ".vi"
+    },
+    {
+      "Name": "Wallis and Futuna",
+      "OfficialName": "The Territory of the Wallis and Futuna Islands",
+      "Alpha2Code": "WF",
+      "Alpha3Code": "WLF",
+      "CountryCode": 876,
+      "TopLevelDomain": ".wf"
+    },
+    {
+      "Name": "Western Sahara",
+      "OfficialName": "The Sahrawi Arab Democratic Republic",
+      "Alpha2Code": "EH",
+      "Alpha3Code": "ESH",
+      "CountryCode": 732,
+      "TopLevelDomain": ".eh (ni)"
+    },
+    {
+      "Name": "Yemen",
+      "OfficialName": "The Republic of Yemen",
+      "Alpha2Code": "YE",
+      "Alpha3Code": "YEM",
+      "CountryCode": 887,
+      "TopLevelDomain": ".ye"
+    },
+    {
+      "Name": "Zambia",
+      "OfficialName": "The Republic of Zambia",
+      "Alpha2Code": "ZM",
+      "Alpha3Code": "ZMB",
+      "CountryCode": 894,
+      "TopLevelDomain": ".zm"
+    },
+    {
+      "Name": "Zimbabwe",
+      "OfficialName": "The Republic of Zimbabwe",
+      "Alpha2Code": "ZW",
+      "Alpha3Code": "ZWE",
+      "CountryCode": 716,
+      "TopLevelDomain": ".zw"
+    }
+  ]
+}

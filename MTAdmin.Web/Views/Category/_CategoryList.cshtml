@@ -1,0 +1,33 @@
+﻿@model PagedList<MTAdmin.Shared.ViewModels.Client.CategoryVM>
+@if (Model.Items.Any())
+{
+    int i = 0;
+    while (i <= Model.Items.Count - 1)
+    {
+        <div class="col-md-4">
+            <div class="card card-outline card-primary">
+                <div class="card-header">
+                    <h3 class="card-title text-uppercase catTitle">@Model.Items[i].Name</h3>
+                </div>
+                <a asp-action="Detail" asp-controller="Category" asp-route-id="@Model.Items[i].Id" asp-route-slug="@Model.Items[i].Slug" asp-route-filter="@FilterByEnum.latest" class="link-black text-sm mr-2">
+                <div class="card-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <img class="card-img-top embed-responsive-item lazyload blur-up" data-src="@Model.Items[i].Img?quality=90&width=50&height=50" title="@Model.Items[i].ImgAlt" src="@Model.Items[i].Img?quality=25&width=50&height=50" data-sizes="auto" />  
+                    </div>                    
+                </div>
+                </a>
+                <div class="card-footer">                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="@Model.Items[i].TemplateUsage" aria-valuemin="0" aria-valuemax="100" style="width: @Model.Items[i].TemplateUsage%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        i++;
+    }
+}

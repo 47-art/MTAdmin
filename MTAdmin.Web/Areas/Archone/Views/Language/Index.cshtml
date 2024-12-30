@@ -1,0 +1,104 @@
+﻿@model PagedList<LanguagePageVM>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Languages</h3>
+                    <div class="card-tools">
+                        <form asp-action="Index" method="get">
+                            <div class="input-group input-group-sm" style="width: 400px;">
+                                <input type="text" name="s" value="@ViewData["s"]" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                    <button type="submit" title="submit" class="btn btn-default">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div class="input-group-append px-2">
+                                    <a asp-action="Add" class="btn btn-info">Add New</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Native Name</th>
+                                <th>Language Progress</th>
+                                <th style="width: 20px"></th>
+                                <th style="width: 20px">No of Template</th>
+                                <th style="width: 20px">Is Active</th>
+                                <th style="width: 30px">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                if (Model != null && Model.Items != null && Model.Items.Any())
+                                {
+                                    int i = 0;
+                                    while (i <= Model.Items.Count - 1)
+                                    {
+                                        <tr class="@(!Model.Items[i].IsActive ? "table-active" : "")">
+                                            <td>@Model.Items[i].Id</td>
+                                            <td>@Model.Items[i].Name</td>
+                                            <td>@Model.Items[i].NativeName</td>
+                                            <td>
+                                                <div class="progress progress-xs progress-striped active">
+                                                    <div class="progress-bar bg-primary" style="width: @Model.Items[i].TemplateUsage%"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-warning">@Model.Items[i].TemplateUsage%</span>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-primary">@Model.Items[i].TemplateCount</span>
+                                            </td>
+                                            <td>
+                                                @if (Model.Items[i].IsActive)
+                                                {
+                                                    <span class="badge bg-success">Yes</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-danger">No</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <div class="margin">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-info">Action</button>
+                                                        <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                        </button>
+                                                        <div class="dropdown-menu" role="menu">
+                                                            <a class="dropdown-item" asp-action="Edit" asp-route-id="@Model.Items[i].Id">Edit</a>
+                                                            <a class="dropdown-item" role="button" onclick="onDelete('@Model.Items[i].Id','@Url.Action("Delete","Language")')">Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        i = i + 1;
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer clearfix">
+                    @{
+                        if (Model != null)
+                        {
+                            @(await Component.InvokeAsync<Pager>(Model))
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>     

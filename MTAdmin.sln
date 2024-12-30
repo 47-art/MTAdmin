@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTAdmin.Web", "MTAdmin.Web\MTAdmin.Web.csproj", "{EA8C9804-0137-428C-8D23-4FA5F810D999}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTAdmin.Shared", "MTAdmin.Shared\MTAdmin.Shared.csproj", "{A7816BC4-B6A3-438D-9D03-F490A5FC5FFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTAdmin.Infra", "MTAdmin.Infra\MTAdmin.Infra.csproj", "{030E1E02-6F0D-4ABC-A35A-C1406076D7C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTAdmin.Core", "MTAdmin.Core\MTAdmin.Core.csproj", "{D684D9A7-57D2-4B1F-9E85-26F74CF85810}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTAdmin.Application", "MTAdmin.Application\MTAdmin.Application.csproj", "{3B81A35B-5B3E-40A2-A2EB-F1E2CE9F9B93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTAdmin.Migrations", "MTAdmin.Migrations\MTAdmin.Migrations.csproj", "{4D7D239A-D8C7-4FB5-B1A3-4D8403DD0A93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTClient.Application", "MTClient.Application\MTClient.Application.csproj", "{094D503A-9FC8-410F-AB5A-58C95CFEF38E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA8C9804-0137-428C-8D23-4FA5F810D999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8C9804-0137-428C-8D23-4FA5F810D999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8C9804-0137-428C-8D23-4FA5F810D999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8C9804-0137-428C-8D23-4FA5F810D999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7816BC4-B6A3-438D-9D03-F490A5FC5FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7816BC4-B6A3-438D-9D03-F490A5FC5FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7816BC4-B6A3-438D-9D03-F490A5FC5FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7816BC4-B6A3-438D-9D03-F490A5FC5FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030E1E02-6F0D-4ABC-A35A-C1406076D7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030E1E02-6F0D-4ABC-A35A-C1406076D7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030E1E02-6F0D-4ABC-A35A-C1406076D7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030E1E02-6F0D-4ABC-A35A-C1406076D7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D684D9A7-57D2-4B1F-9E85-26F74CF85810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D684D9A7-57D2-4B1F-9E85-26F74CF85810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D684D9A7-57D2-4B1F-9E85-26F74CF85810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D684D9A7-57D2-4B1F-9E85-26F74CF85810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B81A35B-5B3E-40A2-A2EB-F1E2CE9F9B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B81A35B-5B3E-40A2-A2EB-F1E2CE9F9B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B81A35B-5B3E-40A2-A2EB-F1E2CE9F9B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B81A35B-5B3E-40A2-A2EB-F1E2CE9F9B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7D239A-D8C7-4FB5-B1A3-4D8403DD0A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7D239A-D8C7-4FB5-B1A3-4D8403DD0A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7D239A-D8C7-4FB5-B1A3-4D8403DD0A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7D239A-D8C7-4FB5-B1A3-4D8403DD0A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094D503A-9FC8-410F-AB5A-58C95CFEF38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094D503A-9FC8-410F-AB5A-58C95CFEF38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094D503A-9FC8-410F-AB5A-58C95CFEF38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094D503A-9FC8-410F-AB5A-58C95CFEF38E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8B03B93-97CF-4E02-A83E-3BA40EE5FDD1}
+	EndGlobalSection
+EndGlobal

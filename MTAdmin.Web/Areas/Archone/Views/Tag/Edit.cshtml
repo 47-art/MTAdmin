@@ -1,0 +1,53 @@
+﻿@model TagVM
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title">Edit Language</h3>
+                </div>
+                <form novalidate="novalidate" method="post" asp-action="Edit">
+                    <div asp-validation-summary="All" class="error">
+                        <span>Errors:</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label asp-for="Name">Name</label>
+                            <input placeholder="Enter name" class="form-control" asp-for="Name" type="text">
+                            <span asp-validation-for="Name" class="error invalid-feedback"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Slug">Slug</label>
+                            <input type="text" class="form-control" asp-for="Slug" placeholder="Enter slug">
+                            <span asp-validation-for="Slug" class="error invalid-feedback"></span>
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="icheck-primary d-inline">
+                                <input type="checkbox" asp-for="IsActive">
+                                <label asp-for="IsActive">
+                                    Is Active
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @await Html.PartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml")
+    <script>
+        $(function () {
+            $('#@Html.IdFor(x => x.Name)').on('input', function () {
+                copySlugify('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.Slug)');
+            });
+        });
+    </script>
+}

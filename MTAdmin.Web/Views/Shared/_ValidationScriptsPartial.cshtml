@@ -1,0 +1,12 @@
+﻿<script src="~/plugins/jquery-validation/jquery.validate.min.js" async asp-append-version="true"></script>
+<script src="~/plugins/jquery-validation/additional-methods.min.js" async asp-append-version="true"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" async asp-append-version="true"></script>
+<script type="text/javascript">
+    var settings = {
+        validClass: "is-valid",
+        errorClass: "is-invalid"
+
+    };
+    $.validator.setDefaults(settings);
+    $.validator.unobtrusive.options = settings;
+</script>

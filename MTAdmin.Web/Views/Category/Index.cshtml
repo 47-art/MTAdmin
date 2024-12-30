@@ -1,0 +1,69 @@
+﻿@model ListCategoryVM
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="float-left">
+            <h2>Categoris</h2>
+        </div>
+        <div class="float-right">
+            <div class="btn-group">
+                <a class="btn btn-info @(Model.FilterBy == CategoryFilterEnum.trending ? "active" : "")" href="@Url.Action("Index","Category",new {filter=CategoryFilterEnum.trending.ToString()})">Tranding</a>
+                <a class="btn btn-info @(Model.FilterBy == CategoryFilterEnum.all ? "active" : "")" href="@Url.Action("Index","Category",new {filter=CategoryFilterEnum.all.ToString()})">A - Z</a>                
+                @* <a class="btn btn-secondary" href="/all/all-meme-template-categories">Reset</a> *@
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="tl">
+    @(await Html.PartialAsync("~/Views/Category/_CategoryList.cshtml", Model.CategoryList))
+</div>
+@section Scripts {
+    <script>
+        var page = 0;
+        var _inCallback = false;
+        var currentscrollHeight = 0;
+
+        $(document).ready(function () {            
+            page = '@Model.CategoryList.CurrentPage';
+            truncateHeading("catTitle");
+            $(window).on("scroll", function () {
+                const scrollHeight = $(document).height();
+                const scrollPos = Math.floor($(window).height() + $(window).scrollTop());
+                const isBottom = scrollHeight - 100 < scrollPos;
+
+                if (isBottom && currentscrollHeight < scrollHeight) {
+                    getCategories();
+                    currentscrollHeight = scrollHeight;
+                }
+            });            
+        });
+
+        const getCategories = function (page) {
+            if (page > -1 && !_inCallback) {
+                _inCallback = true;
+                page++;
+                appendLoadingCard('tl', 2);
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("GetCategories", "Category")',
+                    data: {
+                        FilterBy: '@Model.FilterBy',
+                        PageNumber: page,
+                    },
+                    success: function (response) {
+                        if (response != '') {
+                            $('#tl').append(response);
+                            truncateHeading("catTitle");
+                        }
+                        else {
+                            page = -1;
+                        }
+                        _inCallback = false;
+                    }, 
+                    complete: function () {
+                        removeLoadingEl();
+                    }
+                });
+            }
+        }
+    </script>
+}

@@ -1,0 +1,24 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MTAdmin/config
+/.vs/MTAdmin/DesignTimeBuild
+/MTAdmin.Application/bin
+/MTAdmin.Application/obj
+/MTAdmin.Core/bin
+/MTAdmin.Core/obj
+/MTAdmin.Infra/bin
+/MTAdmin.Infra/obj
+/MTAdmin.Migrations/bin
+/MTAdmin.Migrations/obj
+/MTAdmin.Shared/bin
+/MTAdmin.Shared/obj
+/MTAdmin.Web/bin
+/MTAdmin.Web/obj
+/MTAdmin.Web/Properties/PublishProfiles
+/MTAdmin.Web/wwwroot/siteimg
+/MTClient.Application/bin/Debug/net6.0
+/MTClient.Application/obj
+/SiteAnalytics/obj
+/.vs

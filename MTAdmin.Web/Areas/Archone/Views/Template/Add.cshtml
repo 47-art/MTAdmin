@@ -1,0 +1,195 @@
+﻿@model CreateTemplateVM
+<div class="container-fluid">    
+        <div class="row">            
+            <div class="col-md-12">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Add Template</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="bs-stepper linear">
+                            <div class="bs-stepper-header" role="tablist">
+                                <div class="step active" data-target="#upload-template">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="upload-template" id="upload-template-trigger" aria-selected="true">
+                                        <span class="bs-stepper-circle">1</span>
+                                        <span class="bs-stepper-label">Upload Template</span>
+                                    </button>
+                                </div>
+                                <div class="line"></div>
+                                <div class="step" data-target="#upload-thumbnail">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="upload-thumbnail" id="upload-thumbnail-trigger" aria-selected="true">
+                                        <span class="bs-stepper-circle">2</span>
+                                        <span class="bs-stepper-label">Upload Thumbnail</span>
+                                    </button>
+                                </div>
+                                <div class="line"></div>
+                                <div class="step" data-target="#add-detail">
+                                    <button type="button" class="step-trigger" role="tab" aria-controls="add-detail" id="add-detail-trigger" aria-selected="true">
+                                        <span class="bs-stepper-circle">3</span>
+                                        <span class="bs-stepper-label">Add Detail</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bs-stepper-content">
+                                <form novalidate="novalidate" method="post" asp-action="Add" enctype="multipart/form-data">
+                                    <div id="upload-template" class="content active dstepper-block" role="tabpanel" aria-labelledby="upload-template-trigger">
+                                    <div class="form-group">
+                                        <label asp-for="TemplateFile">Template file</label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" onchange="openTemplateFile(event)" accept="image/png, image/jpeg, image/jpg,video/mp4,video/aiv,video/flv" asp-for="TemplateFile" class="custom-file-input">
+                                                <label class="custom-file-label">Choose template file</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="input-group-text" type="button" onclick="clearTemplateFile(event)">Clear</button>
+                                            </div>
+                                            <span asp-validation-for="TemplateFile" class="error invalid-feedback"></span>
+                                        </div>
+                                    </div>
+                                    <img id="tempImg" class="img-fluid img-thumbnail" src="" style="height: 300px;width:100%;">
+                                    <video id="tempVid" style="height: 300px;width:100%;" controls="controls" muted></video>
+                                    <button class="btn btn-primary" type="button" onclick="stepper.next();">Next</button>
+                                </div>
+                                    <div id="upload-thumbnail" class="content" role="tabpanel" aria-labelledby="upload-thumbnail-trigger">
+                                    <div class="form-group">
+                                        <label asp-for="ThumbnailFile">Thumbnail file</label>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" asp-for="ThumbnailFile" onchange="fileLoad(event, '@Html.IdFor(x => x.ThumbnailFile)', 'thumbImg');
+            $('#thumbImg').show();" accept="image/png, image/jpeg, image/jpg" class="custom-file-input">
+                                                <label class="custom-file-label">Choose thumbnail file</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <button class="input-group-text" type="button" onclick="clearElValue('@Html.IdFor(x => x.ThumbnailFile)');clearElValue('thumbImg')">Clear</button>
+                                            </div>
+                                            <span asp-validation-for="ThumbnailFile" class="error invalid-feedback"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="ThumbnailAlt">Alt text thumbnail</label>
+                                        <input type="text" class="form-control" asp-for="ThumbnailAlt" placeholder="Enter alternate text for thumbnail">
+                                    </div>
+                                    <img id="thumbImg" class="img-fluid img-thumbnail" src="" style="height: 300px;width:100%;">
+                                    <button class="btn btn-primary" type="button" onclick="stepper.previous();">Previous</button>
+                                    <button class="btn btn-primary" type="button" onclick="stepper.next();">Next</button>
+                                </div>
+                                    <div id="add-detail" class="content" role="tabpanel" aria-labelledby="add-detail-trigger">
+                                    <div class="form-group">
+                                        <label asp-for="Name">Name</label>
+                                        <input placeholder="Enter name" class="form-control" asp-for="Name" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Desc">Description</label>
+                                        <textarea class="form-control" asp-for="Desc" placeholder="Enter description"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="LanguageId">Language</label>
+                                        <select class="form-control select2bs4" asp-for="LanguageId" asp-items="ViewBag.Languages">
+                                            <option value="">--- Select Language ---</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="CategoryIds">Category</label>
+                                        <select class="form-control select2bs4" multiple="multiple" asp-for="CategoryIds" asp-items="ViewBag.Categories">
+                                            <option value="">--- Select Category ---</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="TagIds">Tags</label>
+                                        <select class="form-control select2bs4" multiple="multiple" asp-for="TagIds" asp-items="ViewBag.Tags">
+                                            <option value="">--- Select Tags ---</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Slug">Slug</label>
+                                        <input type="text" class="form-control" asp-for="Slug" placeholder="Enter slug">
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="MetaDesc">Meta description</label>
+                                        <textarea asp-for="MetaDesc" placeholder="Enter meta description" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="MetaKeywords">Meta keyword</label>
+                                        <textarea asp-for="MetaKeywords" placeholder="Enter meta title" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-primary d-inline">
+                                            <input type="checkbox" asp-for="IsActive">
+                                            <label asp-for="IsActive">
+                                                Is Active
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" type="button" onclick="stepper.previous();">Previous</button>
+                                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>                                                                       
+                    </div>
+                </div>
+            </div>
+        </div>        
+</div>
+@section Scripts {        
+    <script type="text/javascript">
+        var stepper;
+        $(function () {
+            hideTemp();
+            $('#thumbImg').hide();
+            initSelect2();
+            stepper = new Stepper($('.bs-stepper')[0])
+            $('#@Html.IdFor(x => x.Name)').on('input', function () {
+                copySlugify('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.Slug)');
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaDesc)', textCaseTypes.AsItis);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaKeywords)', ' Meme Template,', textCaseTypes.TitlCase);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.ThumbnailAlt)', 'Meme Template', textCaseTypes.TitlCase);
+            });
+        });
+
+        const openTemplateFile = function (event) {
+            const file = event.target.files[0];
+            const fileType = file['type'];
+
+            if (fileLoad(event, '@Html.IdFor(x => x.TemplateFile)', fileType.includes('image') ? 'tempImg' : 'tempVid')) {
+                if (fileType.includes('image')) {
+                    showTempImg();
+                }
+                else if (fileType.includes('video')) {
+                    showTempVid();
+                }
+                setFieldValues(file.name);
+            }
+        }
+
+        const clearTemplateFile = function (event) {
+            clearElValue('@Html.IdFor(x => x.TemplateFile)');
+            clearElValue('tempImg');
+            clearElValue('tempVid');
+            hideTemp();
+        }
+
+        const setFieldValues = function (name) {
+            document.getElementById('@Html.IdFor(x => x.Name)').value = name.replace(/\.[^/.]+$/, "");
+            document.getElementById('@Html.IdFor(x => x.MetaKeywords)').value = name.replace(/\.[^/.]+$/, "");
+            //document.getElementById('@Html.IdFor(x => x.MetaDesc)').value = name.replace(/\.[^/.]+$/, "");
+        }
+
+        const showTempImg = function () {
+            $('#tempImg').show();
+            $('#tempVid').hide();
+        }
+
+        const showTempVid = function () {
+            $('#tempImg').hide();
+            $('#tempVid').show();
+        }
+
+        const hideTemp = function () {
+            $('#tempImg').hide();
+            $('#tempVid').hide();
+        }
+    </script>    
+    @await Html.PartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml")
+}

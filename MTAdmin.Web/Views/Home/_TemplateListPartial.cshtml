@@ -1,0 +1,46 @@
+﻿@model PagedList<MTAdmin.Shared.ViewModels.Client.TemplateVM>
+@if (Model.Items.Any())
+{
+    int i = 0;
+    while (i < Model.Items.Count)
+    {
+        <div class="col-md-4">
+            <div class="card card-outline card-primary">
+
+                <div class="card-header">
+                    <h3 class="card-title text-uppercase tempTitle">@Model.Items[i].Name</h3>
+                </div>                
+                <div class="card-body">
+                    <a asp-action="Detail" asp-controller="Home" asp-route-id="@Model.Items[i].Id" asp-route-slug="@Model.Items[i].Slug">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            @* <img class="card-img-top embed-responsive-item lazyload" data-sizes="auto"
+                                 data-srcset="responsive-image1.jpg 300w,responsive-image2.jpg 600w,responsive-image3.jpg 900w"
+                                 src="@Model.Items[i].Thumbnail" alt="@Model.Items[i].ThumbnailAlt"> *@
+                            <img class="card-img-top embed-responsive-item lazyload blur-up" data-src="@Model.Items[i].Thumbnail?quality=90&width=50&height=50" title="@Model.Items[i].ThumbnailAlt" src="@Model.Items[i].Thumbnail?quality=25&width=50&height=50" data-sizes="auto" />
+                        </div>
+                    </a>
+                </div>                
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="@Url.Action("Detail","Category",new { id = Model.Items[i].CategoryId,slug=Model.Items[i].CategorySlug,filter=FilterByEnum.latest})" class="link-black text-sm mr-2"><i class="fas fa-list-alt mr-1"></i>@Model.Items[i].CategoryName</a>
+                            <span class="float-right text-muted"></span>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="@Model.Items[i].Popularity" aria-valuemin="0" aria-valuemax="100" style="width: @Model.Items[i].Popularity%">
+                                </div>
+                            </div>
+                            @* <div class="text-sm text-center mt-1">
+                    70 views and download
+                    </div> *@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        i++;
+    }
+}

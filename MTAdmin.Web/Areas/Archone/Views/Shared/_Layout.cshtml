@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+
+    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">*@
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/admin-lte/css/adminlte.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/plugins/toastr/toastr.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/plugins/bs-stepper/css/bs-stepper.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/plugins/sweetalert2/sweetalert2.css" asp-append-version="true"/>
+    <style>
+        .validation-summary-valid span {
+            display: none;
+        }
+
+        .validation-summary-errors {
+            color: red
+        }
+    </style>
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body class="hold-transition sidebar-mini sidebar-collapse">
+    <div class="wrapper">
+        @await Html.PartialAsync("_Header.cshtml")
+        @* @await Html.PartialAsync("_SidebarNav.cshtml") *@
+        @(await Component.InvokeAsync(nameof(Sidebar)))
+        <div class="content-wrapper">
+            @*@await Html.PartialAsync("_BreadCrumb.cshtml")*@
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            @* @await Component.InvokeAsync(nameof(PageHeader)) *@
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                @* @(await Component.InvokeAsync(nameof(Breadcrumb))) *@
+                            </ol>
+                        </div>
+                        <br/>
+                        @await Component.InvokeAsync("NToastNotify")
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("_Footer.cshtml")
+    </div>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/admin-lte/js/adminlte.min.js" asp-append-version="true" async></script>
+    <script src="~/plugins/select2/js/select2.full.min.js" asp-append-version="true" async></script>
+    @* <script src="~/plugins/toastr/toastr.min.js" asp-append-version="true" async></script>    *@
+    <script src="~/plugins/bs-stepper/js/bs-stepper.min.js" asp-append-version="true" async></script>
+    <script src="~/plugins/sweetalert2/sweetalert2.js" asp-append-version="true" async></script>
+    <script src="~/js/site.js" asp-append-version="true" async></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

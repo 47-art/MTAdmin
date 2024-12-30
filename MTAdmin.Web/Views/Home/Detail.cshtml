@@ -1,0 +1,47 @@
+﻿@model TemplateByIdVM
+@if(Model != null && Model.Id > 0)
+{
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">
+                <a href="@Url.Action("Detail","Home",new{Id=Model.Id,Slug=Model.Slug})" class="text-uppercase">@Model.Name</a>
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-7">
+                    @if (Model.TemplateType == TemplateTypeEnum.Image)
+                    {
+                        <img class="card-img-top embed-responsive-item" src="@Model.FileName" alt="@Model.ThumbnailAlt">
+                    }
+                    else if (Model.TemplateType == TemplateTypeEnum.Video)
+                    {
+                        <video class="card-img-top embed-responsive-item video-js" height="450" width="450" id="temp_@Model.Id" preload="auto" data-setup="{}" poster="@Model.Thumbnail" controls="controls" muted>
+                            <source src="@Model.FileName" />
+                        </video>
+                    }
+                </div>
+                <div class="col-md-5 px-3">
+                    <div class="row mt-3 embed-responsive embed-responsive-16by9">
+                        <img class="card-img-top embed-responsive-item" width="450" height="450" src="@Model.Thumbnail" alt="@Model.ThumbnailAlt">
+                    </div>
+                    <div class="row mt-3">
+                        <form asp-action="Index" class="col-md-6" method="get" asp-controller="Download" asp-route-id="@Model.Id">
+                            <button class="col-12  btn btn-success" type="submit">DOWNLOAD TEMPLATE</button>
+                        </form>
+                        <div class="col-md-6">
+                            <button class="col-12 btn btn-info" type="button">COPY LINK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="card-footer">
+        </div>
+    </div>
+}
+else
+{
+    <h3>No Template</h3>
+}

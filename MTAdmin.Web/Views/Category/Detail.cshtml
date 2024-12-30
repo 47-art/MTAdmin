@@ -1,0 +1,93 @@
+﻿@model ListTemplateVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-12 mb-4">  
+        <div class="float-left">
+            <h2>@(Model != null && Model.TemplateList != null && Model.TemplateList.Items.Any() ? Model.TemplateList.Items.FirstOrDefault().CategoryName + " Meme Templates" : "No Templates")</h2>
+        </div>
+        @if(Model != null && Model.TemplateList.Items.Any())
+        {
+            <div class="float-right">
+                <div class="btn-group">
+                    <a class="btn btn-info @(Model.FilterById == FilterByEnum.latest ? "active" : "")" href="@Url.Action("Detail","Category",new {id=Model.CategoryId.ToString(),filter=FilterByEnum.latest.ToString(),slug=Model.CategorySlug})">Latest</a>
+
+                    <a class="btn btn-info @(Model.FilterById == FilterByEnum.popular ? "active" : "")" href="@Url.Action("Detail","Category",new {id=Model.CategoryId.ToString(),filter=FilterByEnum.popular.ToString(),slug=Model.CategorySlug})">Tranding</a>
+                </div>
+            </div>
+        }        
+    </div>
+</div>
+
+@if (Model != null && Model.TemplateList != null && Model.TemplateList.Items.Any())
+{
+    <div class="row" id="tl">
+        @(await Html.PartialAsync("~/Views/Home/_TemplateListPartial.cshtml", Model.TemplateList))
+    </div>
+    @section Scripts {
+    <script>
+        var page = 0;
+        var _inCallback = false;
+        var currentscrollHeight = 0;
+
+        $(document).ready(function () {
+            page = '@Model.TemplateList.CurrentPage';
+                truncateHeading("tempTitle");
+                $(window).on("scroll", function () {
+                    const scrollHeight = $(document).height();
+                    const scrollPos = Math.floor($(window).height() + $(window).scrollTop());
+                    const isBottom = scrollHeight - 100 < scrollPos;
+
+                    if (isBottom && currentscrollHeight < scrollHeight) {
+                        getTempaltes();
+                        currentscrollHeight = scrollHeight;
+                    }
+                });
+            });
+
+            const getTempaltes = function () {
+                if (page > -1 && !_inCallback) {
+                    _inCallback = true;
+                    page++;
+                    appendLoadingCard('tl', 2);
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("GetTemplates", "Home")',
+                        data: {
+                            CategoryId: '@Model.CategoryId',
+                            FilterBy: '@Model.FilterById',
+                            PageNumber: page,
+                        },
+                        success: function (response) {
+                            if (response != '') {
+                                $('#tl').append(response);
+                                truncateHeading("tempTitle");
+                                // $(".video-js").each(function (videoIndex) {
+                                //     var videoId = $(this).attr("id");
+                                //     videojs(videoId).ready(function () {
+                                //         this.on("play", function (e) {
+                                //             //pause other video
+                                //             $(".video-js").each(function (index) {
+                                //                 if (videoIndex !== index) {
+                                //                     this.player.pause();
+                                //                 }
+                                //             });
+                                //         });
+                                //     });
+                                // });
+                            }
+                            else {
+                                page = -1;
+                            }
+                            _inCallback = false;
+                        },
+                        complete: function () {
+                            removeLoadingEl();
+                        }
+                    });
+                }
+            }
+        </script>
+    }
+}

@@ -1,0 +1,179 @@
+﻿@model EditTemplateVM
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header p-2">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" href="#details" data-toggle="tab">Detail</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#thumbnail" data-toggle="tab">Thumbnail</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#template" data-toggle="tab">Template</a></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content">                        
+                        <div class="tab-pane active" id="details">
+                            <form asp-action="Edit" novalidate="novalidate" method="post">
+                                <div class="form-group">
+                                    <label asp-for="Name">Name</label>
+                                    <input placeholder="Enter name" class="form-control" asp-for="Name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Desc">Description</label>
+                                    <textarea class="form-control" asp-for="Desc" placeholder="Enter description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="LanguageId">Language</label>
+                                    <select class="form-control select2bs4" asp-for="LanguageId" asp-items="ViewBag.Languages">
+                                        <option value="">--- Select Language ---</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CategoryIds">Category</label>
+                                    <select class="form-control select2bs4" multiple="multiple" asp-for="CategoryIds" asp-items="ViewBag.Categories">
+                                        <option value="">--- Select Category ---</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TagIds">Tags</label>
+                                    <select class="form-control select2bs4" multiple="multiple" asp-for="TagIds" asp-items="ViewBag.Tags">
+                                        <option value="">--- Select Tags ---</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Slug">Slug</label>
+                                    <input type="text" class="form-control" asp-for="Slug" placeholder="Enter slug">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="MetaDesc">Meta description</label>
+                                    <textarea asp-for="MetaDesc" placeholder="Enter meta description" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="MetaKeywords">Meta keyword</label>
+                                    <textarea asp-for="MetaKeywords" placeholder="Enter meta title" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group clearfix">
+                                    <div class="icheck-primary d-inline">
+                                        <input type="checkbox" asp-for="IsActive">
+                                        <label asp-for="IsActive">
+                                            Is Active
+                                        </label>
+                                    </div>
+                                </div>
+                                <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="thumbnail">
+                        </div>
+                        <div class="tab-pane" id="template">                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @await Html.PartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml")
+    <script>        
+        $(function () {            
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                var target = $(e.target).attr("href")
+               if (target == '#thumbnail') {
+                    $.ajax({
+                        type: 'GET',
+                        url: '@Url.Action("EditTemplateThumbnail","Template")',
+                        data: { id: '@Model.Id' },
+                        success: function (response) {
+                            $('#thumbnail').html('');
+                            $('#thumbnail').append(response);
+                        }
+                    });
+                }
+                else if (target == '#template') {
+                    $.ajax({
+                        type: 'GET',
+                        url: '@Url.Action("EditTemplateFile","Template")',
+                        data: { id: '@Model.Id' },
+                        success: function (response) {
+                            $('#template').html('');
+                            $('#template').append(response);
+                        }
+                    });                    
+                }
+            });
+            initSelect2();
+            $('#@Html.IdFor(x => x.Name)').on('input', function () { 
+                copySlugify('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.Slug)');
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaDesc)', textCaseTypes.AsItis);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaKeywords)', ' Meme Template,', textCaseTypes.TitlCase);
+            });                        
+        });
+
+        const changeThumbnail = function (id) {
+            let valid = true;
+
+            const file = document.querySelector('#ThumbnailFile');
+            const thumbnailAlt = document.getElementById('ThumbnailAlt').value;
+
+            let formData = new FormData();
+            formData.append("Id", id);
+            formData.append("ThumbnailAlt", thumbnailAlt);
+
+            if (file.files[0] !== undefined) {
+                if (isValidTempOrThumbFile(file.files[0], 'ThumbnailFile')) {
+                    formData.append("ThumbnailFile", file.files[0]);
+                }
+                else {
+                    valid = false;
+                }
+            }
+
+            if (!document.getElementById('thumbImg').getAttribute('src')) {
+                valid = false;
+            }
+
+            if (valid) {
+                uploadFileAjax('@Url.Action("EditTemplateThumbnail","Template")', formData);
+            }
+            else {
+                toastr.error('request data is not valid', 'Error');
+            }
+        }
+
+        const openTemplateFile = function (event) {
+            const file = event.target.files[0];
+            const fileType = file['type'];
+            if (fileLoad(event, 'TemplateFile', 'tempImg')) {
+                if (fileType.includes('image')) {
+                    showTempImg();
+                }
+                else if (fileType.includes('video')) {
+                    showTempVid();
+                }
+                setFieldValues(file.name);
+            }
+        }
+
+        const changeTemplateFile = function (id) {
+            const file = document.querySelector('#TemplateFile');
+            if (isValidTempOrThumbFile(file.files[0], 'TemplateFile')) {
+                let formData = new FormData();
+                formData.append("Id", id);
+                formData.append("TemplateFile", file.files[0]);
+                uploadFileAjax('@Url.Action("EditTemplateFile","Template")', formData);
+            }
+        }
+
+        const showTempImg = function () {
+            $('#tempImg').show();
+            $('#tempVid').hide();
+        }
+
+        const showTempVid = function () {
+            $('#tempImg').hide();
+            $('#tempVid').show();
+        }
+    </script>
+}

@@ -1,0 +1,30 @@
+﻿@model EditTemplateThumbnailVM
+
+@if (Model != null && Model.Id > 0)
+{
+    <div class="form-group">
+        <label for="ThumbnailFile">Thumbnail file</label>
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" id="ThumbnailFile" accept="image/png, image/jpeg, image/jpg" onchange="fileLoad(event, 'ThumbnailFile', 'thumbImg');" class="custom-file-input">
+                <label class="custom-file-label">Choose thumbnail file</label>
+            </div>
+            <div class="input-group-append">
+                <button class="input-group-text" type="button" onclick="clearElValue('ThumbnailFile');clearElValue('thumbImg');">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="ThumbnailAlt">Alt text thumbnail</label>
+        <input type="text" class="form-control" asp-for="ThumbnailAlt" placeholder="Enter alternate text for thumbnail">
+    </div>
+    <img id="thumbImg" class="img-fluid img-thumbnail" src="@Model.Thumbnail" style="height: 300px;width:100%;">
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <button type="button" onclick="changeThumbnail('@Model.Id')" class="btn btn-primary">Save</button>
+}
+else
+{
+    <p>No data</p>
+}

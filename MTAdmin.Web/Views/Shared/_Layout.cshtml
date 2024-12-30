@@ -1,0 +1,116 @@
+﻿@using MTAdmin.Web.ViewComponents
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    @(await Component.InvokeAsync(nameof(MetaTags)))
+    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">*@
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css" asp-append-version="true"/>    
+    <link rel="stylesheet" href="~/admin-lte/css/adminlte.min.css" asp-append-version="true"/>  
+    <link rel="stylesheet" href="~/plugins/select2/css/select2.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" asp-append-version="true" />  
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" asp-append-version="true" />
+    <style>
+        .validation-summary-valid span {
+            display: none;
+        }
+
+        .validation-summary-errors {
+            color: red
+        }
+
+        .blur-up {
+            -webkit-filter: blur(5px);
+            filter: blur(5px);
+            transition: filter 400ms, -webkit-filter 400ms;
+        }
+
+            .blur-up.lazyloaded {
+                -webkit-filter: blur(0);
+                filter: blur(0);
+            }
+
+        .dark-mode .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice {
+            color: #181717;
+        }
+    </style>
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<!--sidebar-mini-->
+<body class="sidebar-mini layout-fixed dark-mode">
+    <div class="wrapper">
+        @* <environment names="Production">
+            <cache>
+                @await Html.PartialAsync("_Header.cshtml")
+                @(await Component.InvokeAsync(nameof(SideBar)))
+            </cache>            
+        </environment>    *@     
+        <environment names="Development">
+            @await Html.PartialAsync("_Header.cshtml")
+            @(await Component.InvokeAsync(nameof(SideBar)))
+        </environment>
+        <div class="content-wrapper">
+            @* @await Html.PartialAsync("_BreadCrumb.cshtml") *@
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            @* @await Component.InvokeAsync(nameof(PageHeader)) *@
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                @* @(await Component.InvokeAsync(nameof(Breadcrumb))) *@
+                            </ol>
+                        </div>
+                        <br/>                        
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </section>
+        </div>
+        <environment names="Development">
+            @await Html.PartialAsync("_Footer.cshtml")
+        </environment>        
+@*         <environment names="Production">
+            <cache>
+                @await Html.PartialAsync("_Footer.cshtml")
+            </cache>
+        </environment> *@
+    </div>
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/admin-lte/js/adminlte.min.js" asp-append-version="true"></script>
+    <script src="~/plugins/select2/js/select2.full.min.js" asp-append-version="true"></script> 
+    <script src="~/lib/lazysizes/lazysizes.min.js" asp-append-version="true" async=""></script>
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js" asp-append-version="true"></script>
+    <script src="~/js/s.js"></script>
+    <script>
+        window.HELP_IMPROVE_VIDEOJS = false;
+        $('.select2bs4').select2({
+            theme: 'bootstrap4'
+        });        
+        // $(".video-js").each(function (videoIndex) {
+
+        //     var videoId = $(this).attr("id");
+
+        //     videojs(videoId).ready(function () {
+        //         this.on("play", function (e) {
+        //             //pause other video
+        //             $(".video-js").each(function (index) {
+        //                 if (videoIndex !== index) {
+        //                     this.player.pause();
+        //                 }
+        //             });
+        //         });
+
+        //     });
+        // });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+<!-- change div tag to section in content-header and content-->

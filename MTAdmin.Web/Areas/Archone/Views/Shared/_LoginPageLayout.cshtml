@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin | Log in</title>
+    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">*@
+    <environment names="Development">
+        <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css" asp-append-version="true">
+        <!--<link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">-->
+        <link rel="stylesheet" href="~/admin-lte/css/adminlte.min.css" asp-append-version="true">
+    </environment>   
+    <environment names="Production">
+        <!--Use CDN here-->
+    </environment>
+</head>
+<body class="hold-transition login-page">
+    @RenderBody()
+    <environment names="Development">
+        <script src="~/plugins/jquery/jquery.min.js" asp-append-version="true"></script>
+        <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+        <script src="~/admin-lte/js/adminlte.min.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Production">
+        <!--Use CDN here-->
+    </environment>
+    @await Html.PartialAsync("_ValidationScriptsPartial.cshtml")
+</body>
+</html>

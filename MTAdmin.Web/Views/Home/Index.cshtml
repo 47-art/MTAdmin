@@ -1,0 +1,120 @@
+﻿@model ListTemplateVM
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="float-left">
+             <select class="form-control select2bs4" style="width: 100%;" asp-for="CategoryId">
+                  <option value="0_all">All Categories</option>         
+             </select>
+        </div>
+        <div class="float-right">            
+            <div class="btn-group">                
+                <a class="btn btn-info @(Model.FilterById == FilterByEnum.latest ? "active" : "")" href="@Url.Action("Index","Home",new {filter=FilterByEnum.latest.ToString(),category=Model.CategoryId.ToString(),slug= Model.CategoryId == 0 ? "all-meme-templates" : Model.CategorySlug})">Latest</a>
+                <a class="btn btn-info @(Model.FilterById == FilterByEnum.popular ? "active" : "")" href="@Url.Action("Index","Home",new {filter=FilterByEnum.popular.ToString(),category=Model.CategoryId.ToString(),slug= Model.CategoryId == 0 ? "all-meme-templates" : Model.CategorySlug})">Tranding</a>
+                <a class="btn btn-secondary" href="/">Reset</a>                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="tl">
+    @(await Html.PartialAsync("~/Views/Home/_TemplateListPartial.cshtml",Model.TemplateList))      
+</div>
+@section Scripts{
+    <script>
+        var page = 0;
+        var _inCallback = false;
+        var currentscrollHeight = 0;
+
+        $(document).ready(function () {            
+            getCategories();            
+            $('#@Html.IdFor(x => x.CategoryId)').trigger('change');
+            page = '@Model.TemplateList.CurrentPage';
+
+            $(window).on("scroll", function () {
+                const scrollHeight = $(document).height();
+                const scrollPos = Math.floor($(window).height() + $(window).scrollTop());
+                const isBottom = scrollHeight - 100 < scrollPos;
+
+                if (isBottom && currentscrollHeight < scrollHeight) {                    
+                    getTempaltes();                    
+                    currentscrollHeight = scrollHeight;                    
+                }
+            });
+
+            $("#@Html.IdFor(x => x.CategoryId)").on("change", function () {
+                var selectedId = $(this).val();
+                var slug = selectedId.substring(selectedId.indexOf('_') + 1) + '-meme-templates';
+                var cid = selectedId.substring(0, selectedId.indexOf('_'));
+                var url = "@Url.Action("Index", "Home", new { category = "cid", filter = Model.FilterById.ToString(), slug = "sval" })".replace("cid", cid).replace("sval", slug);
+                window.location.href = url;
+            });
+        });
+        
+        const getCategories = function(){
+            $.ajax({
+                type: 'GET',
+                contentType: 'application/json',
+                url: '/GetCategoriesDD',
+                success: function (response) {
+                    addOptions(response);
+                    truncateHeading("tempTitle");
+                }
+            });
+        }
+
+        const addOptions = function (res) {
+            let i = 0;            
+            while (i <= res.length - 1) {
+                if (res[i].id == '@Model.CategoryId') {
+                    $('#@Html.IdFor(x => x.CategoryId)').append(new Option(res[i].name,res[i].id + '_' + res[i].slug,true, true));
+                }
+                else {
+                    $('#@Html.IdFor(x => x.CategoryId)').append(new Option(res[i].name, res[i].id + '_' + res[i].slug, false, false));
+                }                
+                i++;
+            }            
+        }
+
+        const getTempaltes = function () {
+            if (page > -1 && !_inCallback) {
+                _inCallback = true;
+                page++;
+                appendLoadingCard('tl', 2);
+                $.ajax({
+                    type: 'POST',
+                    url: '/gettemplates',
+                    data: {
+                        CategoryId: '@Model.CategoryId',
+                        FilterBy: '@Model.FilterById',
+                        PageNumber: page,
+                    },
+                    success: function (response) {
+                        if (response != '') {                            
+                            $('#tl').append(response);
+                            truncateHeading("tempTitle");                            
+                            // $(".video-js").each(function (videoIndex) {
+                            //     var videoId = $(this).attr("id");
+                            //     videojs(videoId).ready(function () {
+                            //         this.on("play", function (e) {
+                            //             //pause other video
+                            //             $(".video-js").each(function (index) {
+                            //                 if (videoIndex !== index) {
+                            //                     this.player.pause();
+                            //                 }
+                            //             });
+                            //         });
+                            //     });
+                            // });
+                        }
+                        else {
+                            page = -1;
+                        }
+                        _inCallback = false;
+                    },
+                    complete: function () {
+                        removeLoadingEl();
+                    }
+                });
+            }            
+        }
+    </script>
+}

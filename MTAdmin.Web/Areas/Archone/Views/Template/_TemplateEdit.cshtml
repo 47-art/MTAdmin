@@ -1,0 +1,38 @@
+﻿@model EditTemplateFileVM
+@if(Model != null && Model.Id > 0)
+{
+    <div class="form-group">
+        <label for="TemplateFile">Template file</label>
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" accept="image/png, image/jpeg, image/jpg,video/mp4,video/aiv,video/flv" onchange="openTemplateFile(event)" id="TemplateFile" class="custom-file-input">
+                <label class="custom-file-label">Choose template file</label>
+            </div>
+            <div class="input-group-append">
+                <button class="input-group-text" type="button" onclick="clearElValue('TemplateFile');clearElValue('tempImg');clearElValue('tempVid');">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </div>
+    <img id="tempImg" class="img-fluid img-thumbnail" src="" style="height: 300px;width:100%;">
+    <video id="tempVid" style="height: 300px;width:100%;" controls="controls" muted></video>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    <button class="btn btn-primary" type="button" onclick="changeTemplateFile('@Model.Id')">Save</button>
+    <script>
+        $('#tempImg').hide();
+        $('#tempVid').hide();
+        if ('@Model.TemplateType' == '@TemplateTypeEnum.Video') {
+            document.getElementById("tempVid").src = "@Model.FileName";
+            showTempVid();
+        }
+        else if ('@Model.TemplateType' == '@TemplateTypeEnum.Image') {
+            document.getElementById("tempImg").src = "@Model.FileName";
+            showTempImg();
+        }
+    </script>
+}
+else
+{
+    <p>No data</p>
+}

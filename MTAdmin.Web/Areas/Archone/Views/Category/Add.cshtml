@@ -1,0 +1,91 @@
+﻿@model CreateCategoryVM
+<div class="container-fluid">
+    <form novalidate="novalidate" method="post" asp-action="Add" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-3">
+            <div class="card card-primary card-outline">                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 px-0">
+                            <div class="">
+                                <img id="catImg" class="img-fluid img-thumbnail" src="https://placehold.co/450x450" style="height: 100%;width:100%;">
+                            </div>                            
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                            <input type="file" accept="image/png, image/jpeg, image/jpg" asp-for="ImgFile" onchange="fileLoad(event, '@Html.IdFor(x => x.ImgFile)', 'catImg')" class="custom-file-input">
+                                        <label class="custom-file-label">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                            <button class="input-group-text" type="button" onclick="clearElValue('ImgFile');clearElValue('catImg');">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+            <div class="col-md-9">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h3 class="card-title">Add Category</h3>
+                </div>
+                <div class="card-body">                    
+                    <div class="form-group">
+                        <label asp-for="Name">Name</label>
+                        <input placeholder="Enter name" class="form-control" asp-for="Name" type="text">
+                        <span asp-validation-for="Name" class="error invalid-feedback"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Desc">Description</label>
+                        <textarea class="form-control" asp-for="Desc" placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Slug">Slug</label>
+                        <input type="text" class="form-control" asp-for="Slug" placeholder="Enter slug">
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ImgAlt">Image alternate text</label>
+                        <input placeholder="Enter alternate text for image" class="form-control" asp-for="ImgAlt" type="text">
+                    </div>
+                    <div class="form-group">
+                            <label asp-for="MetaDesc">Meta Description</label>
+                            <textarea asp-for="MetaDesc" placeholder="Enter meta description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MetaKeywords">Meta keyword</label>
+                            <textarea asp-for="MetaKeywords" placeholder="Enter meta title" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="icheck-primary d-inline">
+                            <input type="checkbox" asp-for="IsActive">
+                            <label asp-for="IsActive">
+                                Is Active
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                </div>
+            </div>                
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $('#@Html.IdFor(x => x.Name)').on('input', function () {
+                copySlugify('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.Slug)');
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaDesc)',textCaseTypes.AsItis);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.MetaKeywords)',' Category,',textCaseTypes.TitlCase);
+                copyText('#@Html.IdFor(x => x.Name)', '#@Html.IdFor(x => x.ImgAlt)', ' Category', textCaseTypes.TitlCase);
+            });
+        });
+    </script>
+    @await Html.PartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml");
+}
