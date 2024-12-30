@@ -1,4 +1,4 @@
-﻿namespace MTA.Shared.Constants
+﻿namespace MTAdmin.Shared.Constants
 {
     public static class Roles
     {
